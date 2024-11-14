@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --50BlackRock: #130027;
+  --0Amour: #FDF5FC;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body{
+  background-color: var(--50BlackRock);
+}
+
+.display{
+  font-family: "Anton SC", 'Segoe UI', 'Roboto';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.headline{
+  font-family: "Anton SC", 'Segoe UI', 'Roboto';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.title{
+  font-family: Jost, 'Segoe UI', 'Roboto';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.body{
+  font-family: Jost, 'Segoe UI', 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.label{
+  font-family: Jost, 'Segoe UI', 'Roboto';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.label-sm{
+  font-family: Jost, 'Segoe UI', 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.link-sm{
+  font-family: Jost, 'Segoe UI', 'Roboto';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.12px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+}

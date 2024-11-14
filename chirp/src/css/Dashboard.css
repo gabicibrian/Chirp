@@ -1,0 +1,26 @@
+.dashboard-containter{
+    align-content: flex-start;
+    display: flex;
+}
+.dashboard-content{
+    display: flex;
+    width: 358px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px 21px;
+    flex-wrap: wrap;
+    padding: 18px 16px;
+}
+
+body{
+    background-image: url(../assets/liquid.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*.vector-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}*/
