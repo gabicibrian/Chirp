@@ -1,31 +1,31 @@
-//import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './css/App.css';
-//import Loading from './Loading';
+import Loading from './screens/Loading';
 import Dashboard from './screens/Dashboard';
 import NavBar from './components/NavBar';
 
 function App() {
-  /*const [loading, setLoading] = useState(true)
-    useEffect(() => {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
         setTimeout(() => setLoading(false), 5000)
-    }, [])
+  }, [])
 
-    if(loading){
-      return < Loading/>
-    }
-
-  return (
+  if(loading){
+    return(
     <div className="App">
-      <h1>Hello</h1>
+      < Loading/>
     </div>
-  );*/
-  return(
-    <div className="App">
-      < NavBar/>
-      < Dashboard/>
-      
-    </div>
-  )
+    )
+  } else{
+    return(
+      <div className="App">
+        < NavBar/>
+        < Dashboard/>
+        
+      </div>
+    )
+  }
 }
 
 export default App;

@@ -1,11 +1,55 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing:border-box;
 }
 
 :root{
+  /*colores variables*/
+  --0Color:#FDF5FC ;
+  --100Color: #BFB0BE ;
+
+  /*colores estilo*/
+  --0BlackRock: #776986;
+  --25BlackRock: #331E49;
   --50BlackRock: #130027;
+  --75BlackRock: #140028;
+  --100BlackRock: #0A0014;
+
+  --0BabyPurple: #E2D0FF;
+  --25BabyPurple: #D0B3FF;
+  --50BabyPurple: #C19BFF;
+  --75BabyPurple: #9F80D2;
+  --100BabyPurple: #725B96;
+
+  --0PaleMauve: #FDE9FC;
+  --25PaleMauve: #FDDDFA;
+  --50PaleMauve: #FCD6F9;
+  --75PaleMauve: #D0B0CD;
+  --100PaleMauve: #A38FA1;
+
   --0Amour: #FDF5FC;
+  --25Amour: #FBECFA;
+  --50Amour: #FAE6F8;
+  --75Amour: #DDCBDB;
+  --100Amour: #BFB0BE;
+
+  --0MintTulip: #E8F8FD;
+  --25MintTulip: #D7F3FB;
+  --50MintTulip: #CEF1FA;
+  --75MintTulip: #C0DDE4;
+  --100MintTulip: #B7D0D6;
+
+  --0Celadon: #E6FCEA;
+  --25Celadon: #CDF9D4;
+  --50Celadon: #C2F8CB;
+  --75Celadon: #BAEAC2;
+  --100Celadon: #AFD5B5;
+}
+
+/*Material Design Font Icon*/
+md-icon {
+  font-family: var(--md-icon-font, 'Material Symbols Outlined'), sans-serif;
 }
 
 code {
@@ -17,6 +61,7 @@ body{
   background-color: var(--50BlackRock);
 }
 
+/*Textos*/
 .display{
   font-family: "Anton SC", 'Segoe UI', 'Roboto';
   font-size: 36px;

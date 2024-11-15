@@ -15,7 +15,9 @@ const CardSnapshot = ({size, imgPath ,poster, caption, profileView, user1, comme
                 <div className='snapshot-caption'>
                     <p className='label'>{poster}:</p>
                     <p className='body ellipsis'>{caption}</p>
-                    <img src={heart} alt='Ícono de corazón'></img>
+                    <md-icon-button>
+                        <md-icon>home</md-icon>
+                    </md-icon-button>
                 </div>
 
                 <div className='snapshot-comments'>
@@ -41,7 +43,10 @@ const CardSnapshot = ({size, imgPath ,poster, caption, profileView, user1, comme
                 <div className='snapshot-caption'>
                     <p className='label'>{poster}:</p>
                     <p className='body ellipsis'>{caption}</p>
-                    <img src={heart} alt='Ícono de corazón'></img>
+                    <md-icon-button selected>
+                        <md-icon>favorite_border</md-icon>
+                        <md-icon slot="selected">favorite</md-icon>
+                    </md-icon-button>
                 </div>
             </div>
         )
