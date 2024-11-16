@@ -3,8 +3,8 @@ import './css/App.css';
 import Splash from './screens/Splash';
 import Dashboard from './screens/Dashboard';
 import NavBar from './components/NavBar';
-import { AnimatePresence, motion } from 'framer-motion';
-import Header from './components/Header';
+//import { AnimatePresence, motion } from 'framer-motion';
+
 
 function App() {
   //Estados y time out para pasar del splash a home
@@ -49,8 +49,9 @@ function App() {
     )
   }
 
-    /*return(
-      <Header/>
+  //Para testear paginas
+   /* return(
+      <Splash/>
     )*/
 }
 
