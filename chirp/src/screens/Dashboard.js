@@ -18,7 +18,7 @@ const Dashboard = () =>{
                 < CardSnapshot size='mid' imgPath = {ssValorant} poster='madison' caption='quick valo<3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' profileView={false}/>
                 < CardSnapshot size='square' imgPath = {ssValorant} poster='madison' caption='quick valo<3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' profileView={false}/>
                 < CardSnapshot size='vertical' imgPath = {ssCeleste} poster='madison' caption='quick valo<3aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' profileView={false}/>
-        </div>
+            </div>
     )
 
 }

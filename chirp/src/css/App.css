@@ -1,6 +1,30 @@
 body{
-    max-width: 767px;
+    max-width: 768px;
     margin: auto;
     display: flex;
     justify-content: center;
+
+    /*Vector de fondo*/
+    background-image: url(../assets/liquid.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    background-position-x: center;
 }
+.App{
+    height: 100vh;
+}
+.main-content{
+    display: flex;
+    width: 390px;
+    justify-content: center;
+}
+
+/*@media only screen and (min-width: 768px){
+    body{
+        background-size: cover;
+    }
+    .main-content{
+        width: 768px;
+    }
+}*/

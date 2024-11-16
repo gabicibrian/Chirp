@@ -1,7 +1,8 @@
 import '../css/CardSnapshot.css';
-import heart from '../assets/heart.svg';
 
 const CardSnapshot = ({size, imgPath ,poster, caption, profileView, user1, comment1, user2, comment2}) => {
+//Tipos de props o propiedades: size-string, imgPath-string/img, poster/caption-string
+//                              profileView-bool, user1/comment1/user2/comment2-string
     if (profileView) {
         return(
             <div className={`card-snapshot ${size}`}>
