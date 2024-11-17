@@ -17,5 +17,6 @@
 
 .navbar-container md-icon-button{
     --md-icon-button-icon-color: var(--100Color);
+    --md-sys-color-primary: var(--50BlackRock);
     size: 40px;
 }
