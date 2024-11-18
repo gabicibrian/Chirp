@@ -1,34 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
-
+import '@material/web/tabs/secondary-tab.js';
+import '@material/web/ripple/ripple.js';
 import './css/index.css';
-
 import App from './App';
-import Dashboard from './screens/Dashboard';
-import Splash from './screens/Splash';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children:[
-      {
-        path: '/',
-        element: <Dashboard />,
-      }
-    ]
-  },
-  {
-    path: '/.',
-    element: <Splash />
-  }
-])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+      <App />
   </React.StrictMode>
 );
 

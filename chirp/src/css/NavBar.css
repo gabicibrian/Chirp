@@ -4,19 +4,31 @@
     padding: 3px 40px 10px 40px;
     justify-content: space-between;
     align-items: center;
-    width: 390px;
+    width: inherit;
 
     z-index: 1;
     position: fixed;
     bottom: 0;
+    margin: 0 auto;
 
     border-radius: 58px 58px 0px 0px;
     background: var(--0Color);
     box-shadow: 0px -4px 8px 3px rgba(0, 0, 0, 0.15), 0px -1px 3px 0px rgba(0, 0, 0, 0.30);
 }
 
-.navbar-container md-icon-button{
-    --md-icon-button-icon-color: var(--100Color);
-    --md-sys-color-primary: var(--50BlackRock);
-    size: 40px;
+.navbar-container a{
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.navbar-container a:focus{
+    background-color: none;
+}
+
+.navbar-container md-icon{
+    color: var(--100Color);
+}
+
+.navbar-container .active md-icon{
+    color: var(--50BlackRock)
 }

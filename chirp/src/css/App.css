@@ -1,5 +1,7 @@
 body{
     max-width: 768px;
+    min-width: 320px;
+    width: fit-content;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -11,21 +13,18 @@ body{
     background-attachment: fixed;
     background-position-x: center;
 }
-.App{
-    height: 100vh;
-}
+
 .main-content{
     display: flex;
+    flex-direction: column;
     width: 390px;
     justify-content: center;
+    position: relative;
     overflow-x: hidden;
 }
 
-/*@media only screen and (min-width: 768px){
-    body{
-        background-size: cover;
-    }
-    .main-content{
-        width: 768px;
-    }
-}*/
+/*Class para texto mientras no existen las demás pantallas*/
+.placeholder{
+    margin: 110px auto;
+    width: fit-content;
+}
