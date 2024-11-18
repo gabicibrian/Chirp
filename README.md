@@ -21,9 +21,9 @@ Bibliotecas utilizadas:
 Estructura del proyecto:
 
 'chirp': folder principal:
-a. node_modules: Contiene información de librerías/datos de React
-b. public: Contiene el index.html donde se transfiere toda la información y los datos e imágenes para la web app e.g: Nombre, ícono que tendrá en el celular y los colores principales para su personalización.
-c. src: Contiene todo lo modificable, está dividida de la siguiente manera:
+1. node_modules: Contiene información de librerías/datos de React
+2. public: Contiene el index.html donde se transfiere toda la información y los datos e imágenes para la web app e.g: Nombre, ícono que tendrá en el celular y los colores principales para su personalización.
+3. src: Contiene todo lo modificable, está dividida de la siguiente manera:
 + assets: Imágenes, json(lottie) y SVGs.
 + components: Componentes únicos y propios de Chirp que hemos recreado a los que realizamos en Figma.
 + css: Todos los archivos .css de estilo.
