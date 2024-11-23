@@ -1,0 +1,38 @@
+/*Botón*/
+.btn-container{
+    display: flex;
+    height: 40px;
+    padding: 9px 73px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 22px;
+    text-decoration: none;
+}
+
+/*Tamaños*/
+.btn-LG{
+    width: 260px;
+}
+
+.btn-MD{
+    width: 104px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+/*Jerarquía*/
+.primary{
+    color: var(--50BlackRock, #180031);
+    background: var(--50BabyPurple, #C19BFF);
+}
+
+.text{
+    color: var(--25BabyPurple, #D0B3FF);
+    background: transparent;
+}
+
+.secondary{
+    color: var(--50BlackRock, #180031);
+    background: var(--50MintTulip, #CEF1FA);
+}
