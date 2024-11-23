@@ -1,34 +1,43 @@
 import React, {useState} from 'react';
-import { useOutlet, useLocation, useOutletContext} from "react-router-dom";
+import { useOutlet, useLocation, Outlet } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 
 import NavBar from './components/NavBar';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+
+export const Context = React.createContext()
 
 const MainContent = () => {
   const location = useLocation();
 
-  const StableOutlet = () => {
+  /*const StableOutlet = () => {
     const o = useOutlet();
     const [outlet] = useState(o);
   
     return outlet;
-  };
-
-  //const [selectedPanel, setSelectedPanel] = useState('para-ti-panel');
+  };*/
+ 
+  const [selectedPanel, setSelectedPanel] = useState('para-ti-selected');
+ 
+  
+   //console.log('main content: ' , selectedPanel)
 
   return(
+    
     <div className='main-content'>
-      <Header/>
-      <AnimatePresence mode='popLayout'>
-          <motion.div
-            key={location.pathname}>
-          <StableOutlet/>
+      <Context.Provider value={[ selectedPanel, setSelectedPanel ]}>
+      <Header page={location.pathname}/>
+      
 
-          </motion.div>
-      </AnimatePresence>
+          
+            <Outlet />
+          
+      </Context.Provider>
       <NavBar />
     </div>
+    
+
   )
   
 }

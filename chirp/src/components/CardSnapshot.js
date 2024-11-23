@@ -1,6 +1,7 @@
 import '../css/CardSnapshot.css';
+import { Link } from "react-router-dom";
 
-const CardSnapshot = ({size, imgPath ,poster, caption, profileView, user1, comment1, user2, comment2}) => {
+const CardSnapshot = ({ key, size, imgPath ,poster, caption, profileView, users, comments}) => {
 //Tipos de props o propiedades: size-string, imgPath-string/img, poster/caption-string
 //                              profileView-bool, user1/comment1/user2/comment2-string
     if (profileView) {
@@ -26,20 +27,25 @@ const CardSnapshot = ({size, imgPath ,poster, caption, profileView, user1, comme
                 </div>
 
                 <div className='snapshot-txt'>
-                    <p className='label'>{user1}:</p>
-                    <p className='body ellipsis'>{comment1}</p>
+                    <p className='label'>{users[0]}:</p>
+                    <p className='body ellipsis'>{comments[0]}</p>
                 </div>
 
                 <div className='snapshot-txt'>
-                    <p className='label'>{user2}:</p>
-                    <p className='body ellipsis'>{comment2}</p>
+                    <p className='label'>{users[1]}:</p>
+                    <p className='body ellipsis'>{comments[1]}</p>
                 </div>
             </div>
         )
     } else{
         return(
-            <div className={`card-snapshot ${size}`}>
-                <img src={imgPath} alt='Snapshot' className='snapshot-photo'></img>
+            <div
+            className={`card-snapshot ${size}`}>
+                <Link key={key}
+                to={`/inicio/${key}`}>
+                    <img src={imgPath} alt='Snapshot' className='snapshot-photo'></img>
+                </Link>
+                
 
                 <div className='snapshot-caption'>
                     <p className='label'>{poster}:</p>

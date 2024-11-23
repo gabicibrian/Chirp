@@ -25,19 +25,14 @@ const Splash = () => {
     };
    
     return(
-      <motion.div
-        initial={{left:0}}
-        animate={{left:0}}
-        exit={{left:'-500px'}}
-        transition={{duration: 0.5, ease: 'easeOut'}}
-        className='splash-container'>           
+      <div className='splash-container'>           
         <Lottie
             options={defaultOptions}
             height={450}
             width={391}
         />
         <img src={logo} alt='Logo de Chirp' className='splash-logo'></img>
-      </motion.div>
+      </div>
     )
 }
 

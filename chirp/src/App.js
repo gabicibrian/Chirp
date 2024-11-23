@@ -2,8 +2,11 @@ import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 
 import './css/App.css';
 import Dashboard from './screens/Dashboard';
+import Login from './screens/Login';
 import Splash from './screens/Splash';
 import MainContent from "./MainContent";
+import Sidebar from './components/Sidebar';
+import ModalSnapshot from './components/ModalSnapshot';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,12 @@ const router = createBrowserRouter([
       {
         path: "/inicio",
         element: <Dashboard />,
+        children: [
+          {
+            path: '/inicio/:snapshotId',
+            element: <ModalSnapshot />,
+          }
+        ]
       },
       {
         path: "/busqueda",
@@ -38,8 +47,16 @@ const router = createBrowserRouter([
         path: "/notificaciones",
         element: <h1 className="headline placeholder">Página de Notificaciones</h1>,
       },
+      {
+        path: '/sidebartest',
+        element: <Sidebar/>
+      }
     ],
   },
+  {
+    path: '/login',
+    element: <Login/>
+  }
 ]);
 
 function App() {

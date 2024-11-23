@@ -45,13 +45,24 @@
   --50Celadon: #C2F8CB;
   --75Celadon: #BAEAC2;
   --100Celadon: #AFD5B5;
+
+  --devicewidth: 390px;
+  --sb-track-color: #725b96;
+  --sb-thumb-color: #e2d0ff;
+  --sb-size: 5px;
 }
 
 /*Material Design Font Icon*/
 md-icon {
   font-family: var(--md-icon-font, 'Material Symbols Outlined'), sans-serif;
 }
-
+md-ripple.unbounded {
+  border-radius: 50%;
+  inset: unset;
+  height: var(--state-layer-size);
+  width: var(--state-layer-size);
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -59,6 +70,26 @@ code {
 
 body{
   background-color: var(--50BlackRock);
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--100BabyPurple);
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--0BabyPurple);
+  border-radius: 8px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  * {
+      scrollbar-color: var(--0BabyPurple)
+                     var(--100BabyPurple);
+  }
 }
 
 /*Textos*/
@@ -110,3 +141,10 @@ body{
   text-decoration-skip-ink: none;
   text-decoration-thickness: auto;
 }
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --0Color:#725B96;
+    --100Color: #725B96;
+  }
+}*/

@@ -1,5 +1,5 @@
 .header-container{
-    width: inherit;
+    width: var(--devicewidth);
     background: var(--0Color);
     display: flex;
     flex-direction: column;
@@ -23,14 +23,21 @@
 }
 
 .header-topinfo a{
-   border-radius: 50%;
-   width: 32px;
-   height: 32px;
-   overflow: hidden;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    position: relative;
+    --md-ripple-pressed-color: var(--50BabyPurple);
+    --md-ripple-hover-color: var(--50BabyPurple);
 }
 
 .header-container md-tabs{
     width: 100%;
+    background-color: var(--0Color);
     --md-primary-tab-active-indicator-color: var(--100BabyPurple);
 }
 .header-container md-secondary-tab{
