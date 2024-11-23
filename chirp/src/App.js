@@ -7,6 +7,7 @@ import Splash from './screens/Splash';
 import MainContent from "./MainContent";
 import Sidebar from './components/Sidebar';
 import ModalSnapshot from './components/ModalSnapshot';
+import Registro from "./screens/Registro";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login/>
+  },
+  {
+    path: '/registro',
+    element: <Registro/>
   }
 ]);
 
