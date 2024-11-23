@@ -1,4 +1,4 @@
-.login-container{
+.container{
     display: flex;
     max-width: 390px;
     justify-items: center !important;
@@ -31,6 +31,12 @@
 .groups-container-2{
     padding: 0 16.5%;
     justify-items: center;
+}
+
+#container-contraseña{
+    height: 186px;
+    padding: 0 13.7%;
+    margin-bottom: 90px;
 }
 
 .px10{

@@ -5,13 +5,12 @@ body{
     background-position-x: center;
 }
 
-.access-container{
-    display: flex;
-    max-width: 390px;
-    align-items: flex-start;
-    align-content: flex-start;
-    gap: 16px 20px;
-    flex-wrap: wrap;
-    padding: 18px 16px;
-    margin: auto;
+.container-access{
+    background-color: transparent;
+    margin-top: 375px;
+}
+
+.logo-access{
+    align-content: center;
+    padding: 15px 94.5px 30px;
 }

@@ -1,0 +1,18 @@
+h1{
+    color: var(--50BabyPurple);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p{
+    color: var(--0BabyPurple);
+    margin-bottom: 14px;
+}
+
+.container-heading{
+    padding: 0 11px;
+}
+
+.input{
+    margin: 5px;
+}
