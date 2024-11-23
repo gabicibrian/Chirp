@@ -1,0 +1,40 @@
+.header-container{
+    width: inherit;
+    background: var(--0Color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);   
+}
+
+.header-topinfo{
+    display: flex;
+    padding: 10px 0px;
+    width: 75%;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.header-topinfo h1{
+    color: var(--50BlackRock)
+}
+
+.header-topinfo a{
+   border-radius: 50%;
+   width: 32px;
+   height: 32px;
+   overflow: hidden;
+}
+
+.header-container md-tabs{
+    width: 100%;
+    --md-primary-tab-active-indicator-color: var(--100BabyPurple);
+}
+.header-container md-secondary-tab{
+    width: 50%;
+    color:var(--100BabyPurple);
+    --_active-indicator-height: 3px;
+}

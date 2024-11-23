@@ -1,31 +1,52 @@
-import { useEffect, useState } from 'react';
+import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
+
 import './css/App.css';
-import Loading from './screens/Loading';
 import Dashboard from './screens/Dashboard';
-import NavBar from './components/NavBar';
+import Splash from './screens/Splash';
+import MainContent from "./MainContent";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainContent />,
+    errorElement: (
+      <div style={{ textAlign: "center" }}>
+        <h1 className="headline">404 Not Found</h1>
+        <Link to="/" className="label">
+          Inicio
+        </Link>
+      </div>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <Splash />,
+      },
+      {
+        path: "/inicio",
+        element: <Dashboard />,
+      },
+      {
+        path: "/busqueda",
+        element: <h1 className="headline placeholder">Página de Búsqueda</h1>,
+      },
+      {
+        path: "/amigos",
+        element: <h1 className="headline placeholder">Página de Amigos</h1>,
+      },
+      {
+        path: "/notificaciones",
+        element: <h1 className="headline placeholder">Página de Notificaciones</h1>,
+      },
+    ],
+  },
+]);
 
 function App() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-        setTimeout(() => setLoading(false), 5000)
-  }, [])
-
-  if(loading){
-    return(
-    <div className="App">
-      < Loading/>
-    </div>
-    )
-  } else{
-    return(
-      <div className="App">
-        < NavBar/>
-        < Dashboard/>
-        
-      </div>
-    )
-  }
+  return(
+      <RouterProvider router={router}/>
+  )
+  
 }
 
 export default App;

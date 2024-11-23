@@ -10,7 +10,9 @@
     color: var(--50BlackRock);
     overflow: hidden;
 }
-
+.card-snapshot md-icon-button{
+    --md-sys-color-primary: var(--50BabyPurple);
+}
 /*diferentes tamaños para las cajas*/
 .horizontal{
     width: 358px;
