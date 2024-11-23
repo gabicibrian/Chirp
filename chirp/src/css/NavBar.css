@@ -4,7 +4,7 @@
     padding: 3px 40px 10px 40px;
     justify-content: space-between;
     align-items: center;
-    width: inherit;
+    width: var(--devicewidth);
 
     z-index: 1;
     position: fixed;

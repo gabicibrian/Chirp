@@ -17,10 +17,11 @@ body{
 .main-content{
     display: flex;
     flex-direction: column;
-    width: 390px;
+    width: var(--devicewidth);
     justify-content: center;
     position: relative;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 /*Class para texto mientras no existen las demás pantallas*/

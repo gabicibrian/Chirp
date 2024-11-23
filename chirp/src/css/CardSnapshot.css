@@ -9,9 +9,17 @@
     background-color: var(--0Color);
     color: var(--50BlackRock);
     overflow: hidden;
+    text-decoration: none;
+
+    a{
+        width: 100%;
+        min-height:150px;
+        max-height: 150px;
+        overflow: hidden;
+    }
 }
 .card-snapshot md-icon-button{
-    --md-sys-color-primary: var(--50BabyPurple);
+    --md-sys-color-primary: var(--50BlackRock);
 }
 /*diferentes tamaños para las cajas*/
 .horizontal{
@@ -28,9 +36,7 @@
 }
 
 .snapshot-photo {
-    align-self: stretch;
-    min-height:150px;
-    max-height: 150px;
+    min-width: 100%;
 }
 
 /*texts*/

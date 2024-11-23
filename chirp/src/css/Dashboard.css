@@ -1,13 +1,15 @@
 .dashboard-container{
     position: relative;
-    left: 390px;
+    /*left: 390px;*/
+    left: 0;
     margin-top: 100px;
     display: flex;
     padding: 18px 0 100px 0;
+    width: inherit;
 }
 
 .para-ti-selected{
-    animation: amigos 300ms ease-in-out linear forwards;
+    animation: parati 300ms ease-in-out linear forwards;
 }
 
 .mis-amigos-selected{
