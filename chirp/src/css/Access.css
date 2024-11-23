@@ -1,0 +1,17 @@
+body{
+    background-image: url(../assets/liquid.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+}
+
+.access-container{
+    display: flex;
+    max-width: 390px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 16px 20px;
+    flex-wrap: wrap;
+    padding: 18px 16px;
+    margin: auto;
+}

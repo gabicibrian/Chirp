@@ -1,0 +1,11 @@
+.input-default{
+    display: flex;
+    height: 56px;
+    padding: 18px 10px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid var(--100---Baby-Purple, #725B96);
+}

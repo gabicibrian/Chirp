@@ -1,6 +1,6 @@
 import '../css/Loading.css';
 import logo from '../assets/logo.svg';
-import animation from '../assets/splash-animation.mp4'; //reemplazar por json file o vector
+import animation from '../assets/splash_animation.json'; //reemplazar por json file o vector
 //import liquid from '../assets/liquid.svg';
 
 const Loading = () => {
