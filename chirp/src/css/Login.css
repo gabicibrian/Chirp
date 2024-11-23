@@ -1,16 +1,43 @@
 .login-container{
     display: flex;
     max-width: 390px;
-    align-items: flex-start;
-    align-content: flex-start;
+    justify-items: center !important;
+    align-content: center;
     gap: 16px 20px;
     flex-wrap: wrap;
     padding: 18px 16px;
     background-color: var(--50BlackRock);
-
-    --md-sys-color-primary: var(--50BabyPurple);
-    --md-outlined-text-field-label-text-color: var(--50BabyPurple);
-    --md-outlined-text-field-input-text-color: var(--50BabyPurple);
-    --md-outlined-text-field-input-text-font: Jost;
 }
 
+.logo-container{
+    align-content: center;
+    margin-top: 30px;
+    padding: 50px 37%;
+}
+
+#login-logo{
+    height: 60px;
+    width: auto;
+}
+
+.login-label{
+    color: var(--0Color);
+}
+
+.groups-container{
+    padding: 0 13.7%;
+    justify-items: center;
+}
+
+.groups-container-2{
+    padding: 0 16.5%;
+    justify-items: center;
+}
+
+.px10{
+    margin-bottom: 10px;
+}
+
+.px130{
+    margin-bottom: 15%;
+}

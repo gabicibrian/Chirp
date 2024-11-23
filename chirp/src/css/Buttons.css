@@ -1,19 +1,24 @@
+:root{
+    --md-sys-color-primary: #C19BFF;
+    --md-sys-color-on-primary: #130027;
+}
+
 /*Botón*/
 .btn-container{
     display: flex;
-    height: 40px;
-    padding: 9px 73px;
+    height: 48px !important;
+    padding: 9px 50px !important;
     justify-content: center;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
-    border-radius: 22px;
+    border-radius: 50px;
     text-decoration: none;
 }
 
 /*Tamaños*/
 .btn-LG{
-    width: 260px;
+    width: 240px !important;
 }
 
 .btn-MD{
@@ -21,18 +26,8 @@
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
-/*Jerarquía*/
-.primary{
-    color: var(--50BlackRock, #180031);
-    background: var(--50BabyPurple, #C19BFF);
-}
-
-.text{
-    color: var(--25BabyPurple, #D0B3FF);
-    background: transparent;
-}
-
-.secondary{
-    color: var(--50BlackRock, #180031);
-    background: var(--50MintTulip, #CEF1FA);
+/*Otros*/
+.link{
+    text-decoration: underline !important;
+    color: var(--md-sys-color-primary) !important;
 }
