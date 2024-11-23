@@ -6,4 +6,11 @@
     gap: 16px 20px;
     flex-wrap: wrap;
     padding: 18px 16px;
+    background-color: var(--50BlackRock);
+
+    --md-sys-color-primary: var(--50BabyPurple);
+    --md-outlined-text-field-label-text-color: var(--50BabyPurple);
+    --md-outlined-text-field-input-text-color: var(--50BabyPurple);
+    --md-outlined-text-field-input-text-font: Jost;
 }
+
