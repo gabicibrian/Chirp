@@ -1,16 +1,19 @@
-body{
-    background-image: url(../assets/liquid.svg);
+.container-access{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 390px;
+    background-image: url(../assets/liquid-purple.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position-x: center;
 }
 
-.container-access{
-    background-color: transparent;
-    margin-top: 375px;
-}
-
 .logo-access{
-    align-content: center;
-    padding: 15px 94.5px 30px;
+    margin: 30px auto;
+    img{
+        width: 154px;
+    }
 }

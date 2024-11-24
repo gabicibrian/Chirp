@@ -8,10 +8,11 @@ import MainContent from "./MainContent";
 import Sidebar from './components/Sidebar';
 import ModalSnapshot from './components/ModalSnapshot';
 import Registro from "./screens/Registro";
-import Contraseña1 from "./screens/Contraseña1";
-import Contraseña2 from "./screens/Contraseña2";
-import Contraseña3 from "./screens/Contraseña3";
-import Contraseña4 from "./screens/Contraseña4";
+import RestorePassword from "./screens/RestorePassword";
+import Password1 from "./screens/Password1";
+import Passwordx from "./screens/Passwordx";
+import Password2 from "./screens/Password2";
+import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
 
 const router = createBrowserRouter([
@@ -60,7 +61,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: '/login',
+    path: '/acceso',
+    element: <Access/>
+  },
+  {
+    path: '/inicio-sesion',
     element: <Login/>
   },
   {
@@ -68,25 +73,27 @@ const router = createBrowserRouter([
     element: <Registro/>
   },
   {
-    path: '/contraseña1',
-    element: <Contraseña1/>
+    path: '/restaurar-contrasena',
+    element: <RestorePassword/>,
+    children: [
+      {
+        path: '/restaurar-contrasena',
+        element: <Password1/>
+      },
+      {
+        path: '/restaurar-contrasena/codigo',
+        element: <Password2/>
+      },
+      {
+        path: '/restaurar-contrasena/cambio',
+        element: <Password3/>
+      },
+    ]
   },
-  {
-    path: '/contraseña2',
-    element: <Contraseña2/>
-  },
-  {
-    path: '/contraseña3',
-    element: <Contraseña3/>
-  },
-  {
-    path: '/contraseña4',
-    element: <Contraseña4/>
-  },
-  {
-    path: '/access',
-    element: <Access/>
-  }
+  
+  
+  
+  
 ]);
 
 function App() {

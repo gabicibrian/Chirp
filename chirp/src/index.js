@@ -6,6 +6,8 @@ import '@material/web/ripple/ripple.js';
 import '@material/web/button/text-button.js';
 import "@material/web/textfield/outlined-text-field.js";
 import '@material/web/button/filled-button.js';
+import '@material/web/button/filled-tonal-button.js';
+import '@material/web/dialog/dialog.js';
 import './css/index.css';
 import App from './App';
 

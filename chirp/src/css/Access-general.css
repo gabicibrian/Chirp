@@ -1,48 +1,131 @@
-.container{
+.access-container{
     display: flex;
-    max-width: 390px;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    width: 390px;
     justify-items: center !important;
     align-content: center;
-    gap: 16px 20px;
-    flex-wrap: wrap;
-    padding: 18px 16px;
+    gap: 16px;
+    padding: 75px 16px 18px 16px;
     background-color: var(--50BlackRock);
 }
 
 .logo-container{
-    align-content: center;
-    padding: 25px 37% 50px;
+    margin: 0 auto;
+    img{
+        height: 60px;
+    }
 }
-
-#login-logo{
-    height: 60px;
-    width: auto;
+.error-message{
+    width: 260px;
+    text-align: center;
+    color:var(--25BabyPurple);
 }
-
-.login-label{
-    color: var(--0Color);
-}
-
 .groups-container{
-    padding: 0 13.7%;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 14px;
 }
 
-.groups-container-2{
-    padding: 0 16.5%;
-    justify-items: center;
+.input-default{
+    width: 260px;
+
+    --md-outlined-text-field-label-text-color: var(--75BabyPurple);
+    --md-outlined-text-field-input-text-color: var(--75BabyPurple);
+    --md-outlined-field-outline-color: var(--75BabyPurple);
+    --md-outlined-text-field-focus-outline-color: var(--50BabyPurple);
+    --md-outlined-text-field-input-text-font: Jost;
+    --md-outlined-text-field-label-text-font: Jost;
+
+    
+    --md-sys-color-error: #ff4d4d;
+    --md-sys-color-on-error-container:#b53a3a;
+    --md-sys-color-on-surface: var(--50BabyPurple);
+    --md-sys-color-on-surface-variant: var(--75BabyPurple);
+
+    span.counter{
+        display: none;
+        --_supporting-text-color: var(--50BlackRock);
+    }
 }
 
-#container-contraseña{
-    height: 186px;
-    padding: 0 13.7%;
-    margin-bottom: 90px;
+.separator{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 5px;
+    color: var(--0BabyPurple);
 }
 
-.px10{
-    margin-bottom: 10px;
+.btn-container{
+    width: 260px;
+    height: 40px;
+    align-items: center;
+    --md-sys-color-primary: var(--50BabyPurple);
+    --md-sys-color-on-primary: var(--50BlackRock);
+}
+#btn-alt{
+    --md-sys-color-secondary-container: var(--50MintTulip);
+}
+#btn-google{
+    --md-sys-color-primary: var(--0PaleMauve);
+}
+.login-label{
+    color: #ffffff;
+    text-align: center;
+}
+#last-group{
+    --md-sys-color-primary: var(--50BabyPurple);
+    --md-sys-color-on-primary: var(--50BlackRock);
+    margin-top: auto;
+    margin-bottom: 5vh;
 }
 
-.px130{
-    margin-bottom: 15%;
+.password-link{
+    color: var(--75MintTulip);
+    text-align: center;
+}
+
+.container-heading{
+    width: 260px;
+    h1{
+        color: var(--50BabyPurple);
+        margin-bottom: 10px;
+    }
+    p{
+        color: var(--0BabyPurple);
+        margin-bottom: 14px;
+    }
+}
+.password-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#pw-last-group{
+    --md-sys-color-primary: var(--50BabyPurple);
+    --md-sys-color-on-primary: var(--50BlackRock);
+    margin-top: auto;
+    margin-bottom: 15vh;
+}
+.input-number-group{
+    display: flex;
+    justify-content: space-between;
+    width: 260px;
+    margin: 0 auto;
+}
+.input-number{
+    margin: 5px;
+}
+.confirm-change-dialog{
+    margin: auto;
+    padding: 100px;
+    .access-dialog{
+        margin: auto;
+        text-align: center;
+        max-width: 250px;
+        padding: 20px;
+    }
 }

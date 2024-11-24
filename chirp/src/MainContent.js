@@ -10,6 +10,7 @@ export const Context = React.createContext()
 
 const MainContent = () => {
   const location = useLocation();
+  const username = localStorage.getItem("user");
 
   /*const StableOutlet = () => {
     const o = useOutlet();

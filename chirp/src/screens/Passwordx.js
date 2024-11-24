@@ -1,13 +1,10 @@
-import '../css/index.css';
 import '../css/Access-general.css';
-import '../css/Buttons.css';
-import '../css/Input.css';
 import '../css/Contraseña.css';
 import Logo from '../assets/logo.svg';
 
 const Contraseña2 = () =>{
     return (
-        <div className='container'>
+        <div className='access-container'>
             <div className="logo-container">
                 <img src={Logo} alt="Chirp logo" id="login-logo"></img>
             </div>

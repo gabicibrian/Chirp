@@ -1,40 +1,106 @@
-import '../css/index.css';
-import '../css/Access-general.css';
-import '../css/Buttons.css';
-import '../css/Input.css';
-import Logo from '../assets/logo.svg';
+import "../css/Access-general.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Logo from "../assets/logo.svg";
+import logoGoogle from "../assets/icon-google.svg";
 
-const Registro = () =>{
-    return (
-        <div className='container'>
-            <div className="logo-container">
-                <img src={Logo} alt="Chirp logo" id="login-logo"></img>
-            </div>
-            
-            <div className="groups-container">
-                <md-outlined-text-field label="Nombre de usuario" value="" class='input-default label px10'>
-                </md-outlined-text-field>
-                <md-outlined-text-field label="Correo" type="email" value="" class='input-default label px10'>
-                </md-outlined-text-field>
-                <md-outlined-text-field label="Contraseña" type="password" class="input-default label">
-                <md-icon-button toggle slot="trailing-icon">
-                    <md-icon>visibility</md-icon>
-                    <md-icon slot="selected">visibility_off</md-icon>
-                </md-icon-button>
-                </md-outlined-text-field>
-            </div>
-          
-            <div className="groups-container-2 px130">
-                <md-filled-button class="btn-container btn-LG label px10">Iniciar sesión</md-filled-button>
-            </div>
+const Registro = () => {
+    //Visibilidad de la contraseña
+    const [passwordVisibility, setPasswordVisibility] = useState(false);
+    const handleIconChange = () => {
+      setPasswordVisibility((prevState) => !prevState);
+    };
+    const navigate = useNavigate();
 
-            <div className="groups-container-2">
-                <p className="label-sm login-label px10">¿Ya tienes una cuenta?</p>
-                <md-text-button class="btn-container btn-LG label">Registrarse</md-text-button>
-            </div>
-            
-        </div>
-    );
-}
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const validateSignup = (e) => {
+        e.preventDefault();
+        localStorage.setItem('user', username);
+        localStorage.setItem('password', password);
+        navigate("/inicio-sesion");
+    };
 
-export default Registro
+  return (
+    <div className="access-container">
+      <div className="logo-container">
+        <img src={Logo} alt="Chirp logo"></img>
+      </div>
+
+      <form className="groups-container" onSubmit={validateSignup}>
+        <md-outlined-text-field
+          label="Nombre de usuario"
+          value={username}
+          onInput={(e)=>setUsername(e.target.value)}
+          class="input-default label"
+          required
+        ></md-outlined-text-field>
+
+        <md-outlined-text-field
+          label="Correo"
+          type="email"
+          value=""
+          class="input-default label"
+          required
+        ></md-outlined-text-field>
+
+        <md-outlined-text-field
+          label="Contraseña"
+          {...(passwordVisibility === true ? { type: "text" } : { type: "password" })}
+          value={password}
+          onInput={(e)=>setPassword(e.target.value)}
+          class="input-default label"
+          required
+        >
+          <md-icon-button toggle slot="trailing-icon" type='button' onClick={handleIconChange}>
+            <md-icon>visibility</md-icon>
+            <md-icon slot="selected">visibility_off</md-icon>
+          </md-icon-button>
+        </md-outlined-text-field>
+
+        <md-filled-button class="btn-container label">
+          Registrarse
+        </md-filled-button>
+      </form>
+
+      <div className="separator">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="111"
+          height="1"
+          viewBox="0 0 111 1"
+          fill="none"
+        >
+          <path d="M0 0.5H111" stroke="#D0B3FF" />
+        </svg>
+        <p className="label-sm">o</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="111"
+          height="1"
+          viewBox="0 0 111 1"
+          fill="none"
+        >
+          <path d="M0 0.5H111" stroke="#D0B3FF" />
+        </svg>
+      </div>
+
+      <div className="groups-container">
+        <md-filled-button class="btn-container label" id="btn-google" href="https://accounts.google.com/login">
+          <img src={logoGoogle} alt="Logo de Google" slot="icon"></img>
+          Registrarse con Google
+        </md-filled-button>
+      </div>
+
+      <div className="groups-container" id="last-group">
+        <p className="label-sm login-label px10">¿Ya tienes una cuenta?</p>
+
+        <md-text-button class="btn-container label" onClick={() => navigate("/inicio-sesion")}>
+          Iniciar Sesión
+        </md-text-button>
+      </div>
+    </div>
+  );
+};
+
+export default Registro;

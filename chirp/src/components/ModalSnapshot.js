@@ -7,6 +7,7 @@ import "../css/ModalSnapshot.css";
 
 const ModalSnapshot = () => {
   const params = useParams();
+  const username = localStorage.getItem("user");
   console.log(params.key);
     const [newComment, setNewComment] = useState('');
 
@@ -22,7 +23,7 @@ const ModalSnapshot = () => {
 
         setComments((prevComments) => [
           ...prevComments,
-          { user: "gaby", comment: newComment },
+          { user: username, comment: newComment },
         ]);
     
         setNewComment("");

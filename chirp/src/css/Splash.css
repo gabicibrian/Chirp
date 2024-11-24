@@ -13,7 +13,7 @@
 
 .splash-logo{
     width: 154px;
-    margin: auto;
+    margin: 0 auto;
     transform: scale(0);
     animation: appear 1000ms ease-in 3000ms forwards;
 }
