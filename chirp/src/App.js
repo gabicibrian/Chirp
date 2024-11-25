@@ -10,7 +10,6 @@ import ModalSnapshot from './components/ModalSnapshot';
 import Registro from "./screens/Registro";
 import RestorePassword from "./screens/RestorePassword";
 import Password1 from "./screens/Password1";
-import Passwordx from "./screens/Passwordx";
 import Password2 from "./screens/Password2";
 import Password3 from "./screens/Password3";
 import Access from "./screens/Access";

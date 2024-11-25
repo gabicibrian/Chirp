@@ -30,6 +30,9 @@ const Login = () => {
     }
     
   };
+  const submitForm = (e) => {
+    validateLogin(e)
+  }
 
   return (
     <div className="access-container">
@@ -37,7 +40,7 @@ const Login = () => {
         <img src={Logo} alt="Chirp logo"></img>
       </div>
 
-      <form className="groups-container" onSubmit={validateLogin}>
+      <form className="groups-container" id="login-form">
         {loginError &&
         <p className="label error-message">Usuario o contraseña incorrecta, intenta de nuevo.</p>
         }
@@ -68,7 +71,7 @@ const Login = () => {
           </md-icon-button>
         </md-outlined-text-field>
 
-        <md-filled-button class="btn-container label">
+        <md-filled-button class="btn-container label" onClick={submitForm}>
           Iniciar sesión
         </md-filled-button>
         <Link to="/restaurar-contrasena" className="link-sm password-link">
@@ -110,8 +113,8 @@ const Login = () => {
       </div>
 
       <div className="groups-container" id="last-group">
-        <p className="label-sm login-label px10">¿Aún no tienes una cuenta?</p>
-        <md-text-button oonClick={() => navigate("/registro")} class="btn-container btn-LG label">
+        <p className="label-sm login-label">¿Aún no tienes una cuenta?</p>
+        <md-text-button onClick={() => navigate("/registro")} type='button' class="btn-container label">
           Registrarse
         </md-text-button>
       </div>

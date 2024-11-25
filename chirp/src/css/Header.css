@@ -22,7 +22,8 @@
     color: var(--50BlackRock)
 }
 
-.header-topinfo a{
+.header-pfp{
+    border: none;
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -33,6 +34,7 @@
     position: relative;
     --md-ripple-pressed-color: var(--50BabyPurple);
     --md-ripple-hover-color: var(--50BabyPurple);
+    cursor: pointer;
 }
 
 .header-container md-tabs{

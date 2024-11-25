@@ -1,3 +1,8 @@
+body{
+    background-image: none;
+    background-color: --var(--50BlackRock);
+}
+
 .access-container{
     display: flex;
     flex-direction: column;
@@ -119,7 +124,7 @@
 .input-number{
     margin: 5px;
 }
-.confirm-change-dialog{
+.access-gen-dialog{
     margin: auto;
     padding: 100px;
     .access-dialog{

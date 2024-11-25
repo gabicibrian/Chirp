@@ -31,7 +31,9 @@ const Password3 = () => {
     }
       
   };
-
+  const submitForm = (e) => {
+    changePassword (e)
+  }
 
   return (
     <div className="access-container">
@@ -80,7 +82,7 @@ const Password3 = () => {
         </div>
 
         <div className="groups-container" id="pw-last-group">
-          <md-filled-button class="btn-container label">
+          <md-filled-button class="btn-container label" onClick={submitForm}>
             Cambiar contraseña
           </md-filled-button>
           <md-text-button class="btn-container label" type="button"
@@ -90,8 +92,9 @@ const Password3 = () => {
         </div>
       </form>
 
-      <md-dialog {...(openDialog ? {open:true} : {})} class='confirm-change-dialog'> 
-        <form slot="content" id="form-id" method="dialog" class="body access-dialog">
+      <md-dialog {...(openDialog ? {open:true} : {})}
+      class='access-gen-dialog'> 
+        <form slot="content" id="form-id" method="dialog" class="body access-dialog confirm-pass-dialog">
           Se cambió la contraseña exitosamente.
         </form>
         <div slot="actions">

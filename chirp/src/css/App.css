@@ -7,6 +7,17 @@ body{
     justify-content: center;
 
     /*Vector de fondo*/
+    
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    width: var(--devicewidth);
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+
     background-image: url(../assets/liquid.svg);
     background-repeat: no-repeat;
     background-size: auto;
@@ -14,18 +25,17 @@ body{
     background-position-x: center;
 }
 
-.main-content{
-    display: flex;
-    flex-direction: column;
-    width: var(--devicewidth);
-    justify-content: center;
-    position: relative;
-    overflow-x: hidden;
-    height: 100vh;
-}
-
 /*Class para texto mientras no existen las demás pantallas*/
 .placeholder{
     margin: 110px auto;
     width: fit-content;
+}
+
+md-fab{
+    --md-sys-color-primary-container: var(--0Color);
+    --md-sys-color-on-primary-container: var(--50BlackRock);
+    --md-fab-container-shape: 50%;
+    position: fixed;
+    right: 5vw;
+    bottom: 90px;
 }

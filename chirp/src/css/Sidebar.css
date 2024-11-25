@@ -1,27 +1,68 @@
-.sidebar-overlay{
+.sidebar-container{
     position: fixed;
-    top: 0;
     z-index: 5;
-    background-color: rgba(0, 0, 00, 0.25);
     width: var(--devicewidth);
     min-height: 100vh;
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
 }
-.sidebar-container{
+.sidebar-container-closed{
+    display: none;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 00, 0.25);
+    height: inherit;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    animation: enteroverlay 900ms ease-in forwards;
+}
+
+@keyframes enteroverlay {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+ }
+
+ .overlay.closed{
+    animation: closeoverlay 900ms ease-in forwards;
+ }
+
+ @keyframes closeoverlay {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+ }
+
+.sidebar{
     background-color: var(--50BlackRock);
     color: var(--50BabyPurple);
     padding: 15px 24px;
     height: 100vh;
-    width: 70%;
     display: flex;
     flex-direction: column;
+    transform: translateX(250px);
     gap: 16px;
-    position: relative;
+    box-shadow: -6px 0px 10px 4px rgba(0, 0, 0, 0.15),
+                -2px 0px 3px 0px rgba(0, 0, 0, 0.30);
+    animation: entersidebar 300ms ease-in forwards;
 }
 
-.sidebar-container a{
+@keyframes entersidebar {
+    0%{transform: translateX(250px);}
+    100%{transform: translateX(0);}
+ }
+
+ .sidebar.closed{
+    animation: closesidebar 300ms ease-in forwards; 
+ }
+
+ @keyframes closesidebar {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(250px);}
+ }
+
+.sidebar-container a, .sidebar-link{
     color: var(--50BabyPurple);
     text-decoration: none;
     display: flex;
@@ -32,6 +73,7 @@
     --md-ripple-hover-color: white;
     position: relative;
     border-radius: 100px;
+    cursor: pointer;
 }
   
   
@@ -65,4 +107,16 @@
     margin-top: auto;
     margin-left: auto;
     width: fit-content;
+}
+.dialog{
+    margin: auto;
+    width: fit-content;
+    padding: 25px;
+
+    .title, .body, .label{
+        padding: 15px;
+    }
+    .label{
+        margin: 0 10px 10px 0;
+    }
 }

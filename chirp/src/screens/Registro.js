@@ -14,11 +14,13 @@ const Registro = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [openDialog, setOpenDialog] = useState(false);
+
     const validateSignup = (e) => {
         e.preventDefault();
         localStorage.setItem('user', username);
         localStorage.setItem('password', password);
-        navigate("/inicio-sesion");
+        setOpenDialog(true);
     };
 
   return (
@@ -99,6 +101,16 @@ const Registro = () => {
           Iniciar Sesión
         </md-text-button>
       </div>
+
+      <md-dialog {...(openDialog ? {open:true} : {})}
+      class='access-gen-dialog'> 
+        <form slot="content" id="form-id" method="dialog" class="body access-dialog">
+          Cuenta creada exitosamente.
+        </form>
+        <div slot="actions">
+          <md-text-button form="form-id" class="label access-dialog" onClick={(e)=>navigate('/inicio-sesion')}>Iniciar sesión</md-text-button>
+        </div>
+      </md-dialog>
     </div>
   );
 };

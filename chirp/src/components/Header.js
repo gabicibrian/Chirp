@@ -1,20 +1,22 @@
 import React, {useContext} from 'react';
 import { Context } from '../MainContent';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import '../css/Header.css';
 
 import pfpGatito from '../assets/pfp-gatito.png';
 
-const Header = ({page}) => {
+const Header = ({page, openSidebar}) => {
   const [selectedPanel, setSelectedPanel] = useContext(Context);
-
-  
 
   const getHeaderTitle = (page) => {
     switch (page) {
       case '/inicio' :
         return 'Chirp';
+
+        case '/inicio/undefined' :
+          return 'Chirp';
+      
     
       default:
         return 'pagina';
@@ -27,10 +29,10 @@ const Header = ({page}) => {
         <div className='header-topinfo'>
           <h1 className='headline'>{headerTitle}</h1>
 
-          <Link to='/sidebartest'>
+          <button className='header-pfp' onClick={openSidebar} type='button'>
             <md-ripple></md-ripple>
             <img src={pfpGatito} alt='Foto de perfil del usuario'></img>
-          </Link>
+          </button>
 
         </div>
         <md-tabs>

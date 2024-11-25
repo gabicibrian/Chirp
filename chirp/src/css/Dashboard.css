@@ -2,26 +2,22 @@
     position: relative;
     /*left: 390px;*/
     left: 0;
-    margin-top: 100px;
+    top: 100px;
     display: flex;
-    padding: 18px 0 100px 0;
+    padding: 18px 0 ;
     width: inherit;
+    min-height: 100vh;
 }
 
-.para-ti-selected{
-    animation: parati 300ms ease-in-out linear forwards;
-}
-
-.mis-amigos-selected{
-    animation: amigos 300ms ease-in-out linear forwards;
-}
 
 .dashboard-tab-panel{
     display: flex;
     padding: 0 16px;
+    padding-bottom:100px ;
     gap: 16px 20px;
     flex-wrap: wrap;
     justify-content: center;
+    height: fit-content;
 }
 /*.vector-bg{
     position: fixed;

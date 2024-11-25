@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { useParams, Link } from "react-router-dom";
+//import { motion, transform } from "motion/react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import ssValorant from "../assets/snapshot-valorant.png";
 import pfpGatito from '../assets/pfp-gatito.png';
 import "../css/ModalSnapshot.css";
@@ -28,11 +29,24 @@ const ModalSnapshot = () => {
     
         setNewComment("");
       };
+      const [snapClass, setSnapClass] = useState(false);
+      const navigate = useNavigate();
+  const closeSnapshot = () => {
+    setSnapClass(true);
+    setTimeout(() => {
+      navigate(-1)
+    }, 300);
+  }
 
   return (
-    <div className="modalsnapshot-overlay">
-      <div className="modal-snapshot">
-        <Link to='/inicio'>
+    <div className="modalsnapshot-container">
+      <div
+      className={!snapClass ? 'overlay': 'overlay closed'}>
+
+      </div>
+      <div
+      className={!snapClass ? 'modal-snapshot': 'modal-snapshot closed'}>
+        <Link onClick={closeSnapshot}>
           <md-icon-button id="modalsnapshot-close">
             <md-icon>arrow_drop_up</md-icon>
           </md-icon-button>
@@ -51,8 +65,8 @@ const ModalSnapshot = () => {
 
         <div className="modalsnapshot-caption">
             <img src={pfpGatito} alt=""></img>
-          <p className="label">{params.key}:</p>
-          <p className="body ellipsis">description</p>
+          <p className="label">madison:</p>
+          <p className="body ellipsis">caption test</p>
           <md-icon-button toggle>
             <md-icon>
               <svg
