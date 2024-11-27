@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 import '../css/Sidebar.css'
 
@@ -8,7 +8,7 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
     const [openDialog, setOpenDialog] = useState(false);
     const navigate = useNavigate();
 
-    const dialog = document.getElementsByTagName('md-dialog');
+    //const dialog = document.getElementsByTagName('md-dialog');
     /*dialog.addEventListener('close', () => {
         const cancelClicked = dialog.returnValue === 'cancel';
         const okClicked = dialog.returnValue === 'ok';

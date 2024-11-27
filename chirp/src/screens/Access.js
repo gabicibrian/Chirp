@@ -20,13 +20,13 @@ const Access = () => {
         </div>
         <md-filled-button
           onClick={() => navigate("/registro")}
-          class="btn-container btn-LG label px10"
+          class="btn-container label"
         >
           Crear Cuenta
         </md-filled-button>
         <md-text-button
           onClick={() => navigate("/inicio-sesion")}
-          class="btn-container btn-LG label"
+          class="btn-container label"
         >
           Iniciar sesión
         </md-text-button>

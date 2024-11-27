@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 //import { motion, transform } from "motion/react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import ssValorant from "../assets/snapshot-valorant.png";
 import pfpGatito from '../assets/pfp-gatito.png';
 import "../css/ModalSnapshot.css";
@@ -46,11 +46,9 @@ const ModalSnapshot = () => {
       </div>
       <div
       className={!snapClass ? 'modal-snapshot': 'modal-snapshot closed'}>
-        <Link onClick={closeSnapshot}>
-          <md-icon-button id="modalsnapshot-close">
+          <md-icon-button id="modalsnapshot-close" onClick={closeSnapshot}>
             <md-icon>arrow_drop_up</md-icon>
           </md-icon-button>
-        </Link>
 
         <div className="modalsnapshot-title">
           <h1 className="headline">Snapshot</h1>
