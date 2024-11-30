@@ -1,0 +1,45 @@
+.container-settings{
+    position: relative;
+    /*left: 390px;*/
+    left: 0;
+    display: flex;
+    width: 390px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.container-header{
+    width: 390px;
+    height: 100px;
+    position: fixed;
+    background-color: var(--100Color);
+    display: flex;
+    justify-items: center;
+    padding: 3% 0 5%;
+    z-index: 100;
+}
+
+.header-settings{
+    width: 328px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid var(--50BlackRock);
+    margin: auto;
+}
+
+.container-settingItems{
+    width: 390px;
+    /*height: 600px;*/
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30% 0 25%;
+    overflow: hidden;
+}
+
+h1{
+    color: var( --50BlackRock) !important;
+    margin-bottom: 0px;
+    margin-left: 3%;
+}

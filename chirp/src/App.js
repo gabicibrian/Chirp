@@ -13,6 +13,7 @@ import Contraseña2 from "./screens/Contraseña2";
 import Contraseña3 from "./screens/Contraseña3";
 import Contraseña4 from "./screens/Contraseña4";
 import Access from "./screens/Access";
+import Settings from "./screens/Settings";
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,10 @@ const router = createBrowserRouter([
   {
     path: '/access',
     element: <Access/>
+  },
+  {
+    path: '/settings',
+    element: <Settings/>
   }
 ]);
 
