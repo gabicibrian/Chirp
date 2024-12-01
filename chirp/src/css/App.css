@@ -1,13 +1,11 @@
 body{
-    max-width: 768px;
     min-width: 320px;
-    width: fit-content;
+    width: var(--devicewidth);
     margin: auto;
     display: flex;
     justify-content: center;
-
-    /*Vector de fondo*/
     
+    background-color: var(--50BlackRock);
 }
 
 .main-content{
@@ -20,7 +18,7 @@ body{
 
     background-image: url(../assets/liquid.svg);
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-attachment: fixed;
     background-position-x: center;
 }
@@ -38,4 +36,17 @@ md-fab{
     position: fixed;
     right: 5vw;
     bottom: 90px;
+}
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --0Color:#725B96;
+    --100Color: #725B96;
+  }
+}*/
+@media only screen and (min-width: 580px) {
+    .main-content{
+        background-size: cover;
+        /*background-position-y: -10vh;*/
+    }
 }

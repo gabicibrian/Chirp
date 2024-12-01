@@ -13,7 +13,7 @@ const Dashboard = () =>{
 
   //Lista de información de Para Ti
   const dashboardPostsParaTi = [
-    { key: "snapshot-1",
+    { id: "snapshot-1",
       size: "horizontal",
       imgPath: `${ssValorant}`,
       poster: "madison",
@@ -24,63 +24,63 @@ const Dashboard = () =>{
       user2: "spideys_wife",
       comment2: "tirate un ace",
     },
-    { key: "snapshot-2",
+    { id: "snapshot-2",
       size: "mid",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-3",
+    { id: "snapshot-3",
       size: "mid",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-4",
+    { id: "snapshot-4",
       size: "square",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-5",
+    { id: "snapshot-5",
       size: "vertical",
       imgPath: `${ssCeleste}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-6",
+    { id: "snapshot-6",
       size: "horizontal",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-7",
+    { id: "snapshot-7",
       size: "mid",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-8",
+    { id: "snapshot-8",
       size: "mid",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-9",
+    { id: "snapshot-9",
       size: "square",
       imgPath: `${ssValorant}`,
       poster: "madison",
       caption: "quick valo<3",
       profileView: false,
     },
-    { key: "snapshot-10",
+    { id: "snapshot-10",
       size: "vertical",
       imgPath: `${ssValorant}`,
       poster: "madison",
@@ -176,7 +176,7 @@ const Dashboard = () =>{
       >
         {dashboardPostsParaTi.map((post) => (
           <CardSnapshot
-            key={post.poster}
+            id={post.poster}
             size={post.size}
             imgPath={post.imgPath}
             poster={post.poster}
@@ -198,7 +198,7 @@ const Dashboard = () =>{
       >
         {dashboardPostsAmigos.map((post) => (
           <CardSnapshot
-            key={post.key}
+            id={post.id}
             size={post.size}
             imgPath={post.imgPath}
             poster={post.poster}

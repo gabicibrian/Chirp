@@ -3,12 +3,14 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
-    width: 390px;
+    width: var(--devicewidth);
     justify-items: center !important;
     align-content: center;
     gap: 16px;
     padding: 75px 16px 18px 16px;
     background-color: var(--50BlackRock);
+    --accessdefaultwidth: 260px;
+    --accessdefaultgap:
 }
 
 .logo-container{
@@ -18,7 +20,7 @@
     }
 }
 .error-message{
-    width: 260px;
+    width: var(--accessdefaultwidth);
     text-align: center;
     color:var(--25BabyPurple);
 }
@@ -30,7 +32,7 @@
 }
 
 .input-default{
-    width: 260px;
+    width: var(--accessdefaultwidth);
 
     --md-outlined-text-field-label-text-color: var(--75BabyPurple);
     --md-outlined-text-field-input-text-color: var(--75BabyPurple);
@@ -60,7 +62,7 @@
 }
 
 .btn-container{
-    width: 260px;
+    width: var(--accessdefaultwidth);
     height: 40px;
     align-items: center;
     --md-sys-color-primary: var(--50MintTulip);
@@ -86,7 +88,7 @@
 }
 
 .container-heading{
-    width: 260px;
+    width: var(--accessdefaultwidth);
     h1{
         color: var(--50BabyPurple);
         margin-bottom: 10px;
@@ -110,7 +112,7 @@
 .input-number-group{
     display: flex;
     justify-content: space-between;
-    width: 260px;
+    width: var(--accessdefaultwidth);
     margin: 0 auto;
 }
 .input-number{
@@ -124,5 +126,12 @@
         text-align: center;
         max-width: 250px;
         padding: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 525px) {
+    .access-container{
+        --accessdefaultwidth: 400px;
     }
 }

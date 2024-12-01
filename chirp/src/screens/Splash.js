@@ -31,8 +31,9 @@ const Splash = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }} className='splash-container'>           
         <Lottie
             options={defaultOptions}
-            height={450}
-            width={391}
+            height={'75vh'}
+            width='100vw'
+            className='splash-lottie'
         />
         <img src={logo} alt='Logo de Chirp' className='splash-logo'></img>
       </motion.div>

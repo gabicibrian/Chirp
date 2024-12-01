@@ -4,9 +4,10 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
-    width: 390px;
+    width: var(--devicewidth);
     background-image: url(../assets/liquid-purple.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     background-attachment: fixed;
     background-position-x: center;
 }

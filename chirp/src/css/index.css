@@ -46,7 +46,7 @@
   --75Celadon: #BAEAC2;
   --100Celadon: #AFD5B5;
 
-  --devicewidth: 390px;
+  --devicewidth: 100vw;
   --sb-track-color: #725b96;
   --sb-thumb-color: #e2d0ff;
   --sb-size: 5px;
@@ -66,10 +66,6 @@ md-ripple.unbounded {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-body{
-  background-color: var(--50BlackRock);
 }
 
 *::-webkit-scrollbar {
@@ -142,9 +138,3 @@ body{
   text-decoration-thickness: auto;
 }
 
-/*@media (prefers-color-scheme: dark) {
-  :root {
-    --0Color:#725B96;
-    --100Color: #725B96;
-  }
-}*/

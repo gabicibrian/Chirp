@@ -1,7 +1,7 @@
 .splash-container{
     display: flex;
     flex-direction: column;
-    width: 391px;
+    width: var(--devicewidth);
     padding: auto;
     background-color: var(--50BlackRock);
     position: relative;
@@ -13,7 +13,7 @@
 
 .splash-logo{
     width: 154px;
-    margin: 0 auto;
+    margin: auto;
     transform: scale(0);
     animation: appear 1000ms ease-in 3000ms forwards;
 }

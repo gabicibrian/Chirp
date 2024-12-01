@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <Dashboard />,
         children: [
           {
-            path: '/inicio/:snapshotId',
+            path: '/inicio/:id',
             element: <ModalSnapshot />,
           }
         ]
@@ -52,10 +52,6 @@ const router = createBrowserRouter([
       {
         path: "/notificaciones",
         element: <h1 className="headline placeholder">Página de Notificaciones</h1>,
-      },
-      {
-        path: '/sidebartest',
-        element: <Sidebar/>
       }
     ],
   },

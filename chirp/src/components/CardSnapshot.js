@@ -1,7 +1,7 @@
 import '../css/CardSnapshot.css';
 import { Link } from "react-router-dom";
 
-const CardSnapshot = ({ key, size, imgPath ,poster, caption, profileView, users, comments}) => {
+const CardSnapshot = ({ id, size, imgPath ,poster, caption, profileView, users, comments}) => {
 //Tipos de props o propiedades: size-string, imgPath-string/img, poster/caption-string
 //                              profileView-bool, user1/comment1/user2/comment2-string
     if (profileView) {
@@ -41,8 +41,8 @@ const CardSnapshot = ({ key, size, imgPath ,poster, caption, profileView, users,
         return(
             <div
             className={`card-snapshot ${size}`}>
-                <Link key={key}
-                to={`/inicio/${key}`}>
+                <Link id={id}
+                to={`/inicio/${id}`}>
                     <img src={imgPath} alt='Snapshot' className='snapshot-photo'></img>
                 </Link>
                 

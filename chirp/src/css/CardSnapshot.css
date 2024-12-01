@@ -38,7 +38,6 @@
 .snapshot-photo {
     min-width: 100%;
 }
-
 /*texts*/
 .snapshot-caption{
     display: flex;
@@ -73,4 +72,23 @@
     color: var(--75---Black-Rock, #140028);
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@media only screen and (max-width: 360px) {
+    .horizontal{
+        width: 300px;
+    }
+    .square{
+        width: 50%;
+    }
+    .mid{
+        width: 140px;
+    }
+    .vertical{
+        width: 27%;
+    }
+    
+    .snapshot-photo {
+        min-width: 100%;
+    }
 }
