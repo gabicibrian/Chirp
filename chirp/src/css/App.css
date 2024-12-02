@@ -30,12 +30,13 @@ body{
 }
 
 md-fab{
-    --md-sys-color-primary-container: var(--0Color);
-    --md-sys-color-on-primary-container: var(--50BlackRock);
+    --md-fab-container-color: var(--0Color);
+    --md-fab-icon-color: var(--50BlackRock);
     --md-fab-container-shape: 50%;
     position: fixed;
     right: 5vw;
     bottom: 90px;
+    
 }
 
 /*@media (prefers-color-scheme: dark) {
@@ -47,6 +48,5 @@ md-fab{
 @media only screen and (min-width: 580px) {
     .main-content{
         background-size: cover;
-        /*background-position-y: -10vh;*/
     }
 }

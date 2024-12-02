@@ -1,0 +1,28 @@
+.container-settings{
+    position: relative;
+    left: 0;
+    display: flex;
+    width: var(--devicewidth);
+    flex-wrap: wrap;
+    gap: 16px;
+    animation: entrarsettings 500ms ease-in-out forwards;
+}
+
+@keyframes entrarsettings {
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.container-settingItems{
+    width: var(--devicewidth);
+    /*height: 600px;*/
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30% 0 25%;
+    overflow: hidden;
+}

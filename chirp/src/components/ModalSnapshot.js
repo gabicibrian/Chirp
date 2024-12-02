@@ -1,21 +1,36 @@
 import React, {useState} from "react";
-//import { motion, transform } from "motion/react";
 import { useParams, useNavigate } from "react-router-dom";
-import ssValorant from "../assets/snapshot-valorant.png";
 import pfpGatito from '../assets/pfp-gatito.png';
 import "../css/ModalSnapshot.css";
+import { dashboardPostsAmigos, dashboardPostsParaTi } from "../components/SnapshotConfig";
 
 
 const ModalSnapshot = () => {
-  const params = useParams();
+  const {id} = useParams();
+
+  let snapshot = dashboardPostsParaTi.find(snapshot => snapshot.id === id);
+  if (!snapshot) {
+    snapshot = dashboardPostsAmigos.find(snapshot => snapshot.id === id);
+  }
+
   const username = localStorage.getItem("user");
-  console.log(params.key);
     const [newComment, setNewComment] = useState('');
 
-    const [comments, setComments] = useState([
-        { user: "lolita", comment: "no puede ser" },
-        { user: "madison", comment: "wiruwiruwiruwiru" },
-      ]);
+    
+
+    /*const [commentsArr, setCommentsArr] = useState(
+      [
+        { user: snapshot.users[0], comment: snapshot.comments[0] },
+        { user: snapshot.users[1], comment: snapshot.comments[1] },
+      ]);*/
+
+      const [comments, setComments] = useState(
+        snapshot.users.map((item1, index) => ({
+          user: item1,
+          comment: snapshot.comments[index],
+        }))
+      );
+      
 
     const publishComment = (e) => {
         e.preventDefault();
@@ -58,13 +73,13 @@ const ModalSnapshot = () => {
         </div>
 
         <div className="modalsnapshot-photo">
-          <img src={ssValorant} alt=""></img>
+          <img src={snapshot.imgPath} alt=""></img>
         </div>
 
         <div className="modalsnapshot-caption">
             <img src={pfpGatito} alt=""></img>
-          <p className="label">madison:</p>
-          <p className="body ellipsis">caption test</p>
+          <p className="body wrap-txt">
+            <strong className="label">{snapshot.poster}: </strong>{snapshot.caption}</p>
           <md-icon-button toggle>
             <md-icon>
               <svg
@@ -103,8 +118,7 @@ const ModalSnapshot = () => {
         {comments.map((item, index) => (
           <div className="modalsnapshot-txt" key={index}>
             <img src={pfpGatito} alt=""></img>
-            <p className="label">{item.user}:</p>
-            <p className="body ellipsis">{item.comment}</p>
+            <p className="body"><strong className="label">{item.user}:</strong> {item.comment}</p>
           </div>
         ))}
         </div>

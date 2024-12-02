@@ -64,7 +64,7 @@
 }
 .modalsnapshot-caption{
     display: flex;
-    height: 41px;
+    min-height: 41px;
     padding: 5px;
     align-items: center;
     gap: 2px;
@@ -90,7 +90,7 @@
     width: 100%;
     display: flex;
     gap: 5px;
-    align-items: center;
+    align-items:flex-start;
     margin: 8px 0;
     img{
         width: 24px;
@@ -103,7 +103,10 @@
     white-space: nowrap;
     
 }
+.wrap-txt{
+    width: 100%;
 
+}
 .modalsnapshot-postcomment{
     width: 100%;
     display: flex;

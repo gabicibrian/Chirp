@@ -8,7 +8,7 @@ const NavBar = () => {
   const navButtons = [
     {icon: 'home', path: '/inicio', key: 'dashboard'},
     {icon: 'search', path: '/busqueda', key: 'busqueda'},
-    {icon: 'groups', path: '/amigos', key: 'amigos'},
+    {icon: 'groups', path: '/chats', key: 'chats'},
     {icon: 'notifications', path: '/notificaciones', key: 'notificaciones'}
   ]
     return (

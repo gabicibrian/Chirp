@@ -9,6 +9,7 @@ import '@material/web/button/filled-button.js';
 import '@material/web/button/filled-tonal-button.js';
 import '@material/web/dialog/dialog.js';
 import '@material/web/fab/fab.js';
+import '@material/web/menu/menu.js';
 import './css/index.css';
 import App from './App';
 

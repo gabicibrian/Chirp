@@ -10,10 +10,32 @@
     box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);   
 }
 
+.var1{
+    background: var(--100Color);
+    justify-content: flex-end;
+    box-shadow: none;  
+    height: 104px; 
+
+    .header-topinfo{
+        border-bottom: 1px solid var(--25BlackRock);
+        justify-content: flex-start;
+    }
+}
+
+.var2{
+    background: var(--100Color);
+    justify-content: flex-end;
+    box-shadow: none;  
+    height: 104px; 
+    .header-topinfo{
+        border-bottom: 1px solid var(--25BlackRock);
+    }
+}
+
 .header-topinfo{
     display: flex;
     padding: 10px 0px;
-    width: 75%;
+    width: 90%;
     justify-content: space-between; 
     align-items: center;
 }

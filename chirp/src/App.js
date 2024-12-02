@@ -5,7 +5,6 @@ import Dashboard from './screens/Dashboard';
 import Login from './screens/Login';
 import Splash from './screens/Splash';
 import MainContent from "./MainContent";
-import Sidebar from './components/Sidebar';
 import ModalSnapshot from './components/ModalSnapshot';
 import Registro from "./screens/Registro";
 import RestorePassword from "./screens/RestorePassword";
@@ -13,6 +12,7 @@ import Password1 from "./screens/Password1";
 import Password2 from "./screens/Password2";
 import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
+import Settings from "./screens/Settings";
 
 const router = createBrowserRouter([
   {
@@ -35,10 +35,11 @@ const router = createBrowserRouter([
         path: "/inicio",
         element: <Dashboard />,
         children: [
-          {
-            path: '/inicio/:id',
-            element: <ModalSnapshot />,
-          }
+          
+      {
+        path: '/inicio/:id',
+        element: <ModalSnapshot />,
+      }
         ]
       },
       {
@@ -46,12 +47,16 @@ const router = createBrowserRouter([
         element: <h1 className="headline placeholder">Página de Búsqueda</h1>,
       },
       {
-        path: "/amigos",
-        element: <h1 className="headline placeholder">Página de Amigos</h1>,
+        path: "/chats",
+        element: <h1 className="headline placeholder">Página de Chats</h1>,
       },
       {
         path: "/notificaciones",
         element: <h1 className="headline placeholder">Página de Notificaciones</h1>,
+      },
+      {
+        path: '/configuraciones',
+        element: <Settings/>
       }
     ],
   },
@@ -82,9 +87,9 @@ const router = createBrowserRouter([
       {
         path: '/restaurar-contrasena/cambio',
         element: <Password3/>
-      },
+      }
     ]
-  },
+  }
   
   
   

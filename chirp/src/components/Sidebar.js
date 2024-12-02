@@ -8,12 +8,6 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
     const [openDialog, setOpenDialog] = useState(false);
     const navigate = useNavigate();
 
-    //const dialog = document.getElementsByTagName('md-dialog');
-    /*dialog.addEventListener('close', () => {
-        const cancelClicked = dialog.returnValue === 'cancel';
-        const okClicked = dialog.returnValue === 'ok';
-      });*/
-
     const logOut = () =>{
         setOpenDialog(true);
     }
@@ -27,20 +21,18 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
         localStorage.removeItem("password");
         navigate('/acceso')
     }
-    /*const [closedClass, setClosedClass] = useState(false);
-    const closeSidebarAnim = () => {
-        setClosedClass(true);
-        setTimeout(() => {
-          closeSidebar();
-        }, 300);
-      }*/
+
+    const linkNavigate = (path) => {
+        closeSidebar();
+        navigate(path);
+    }
 
     const sidebarButtons = [
-        {label: 'Perfil', icon: 'account_circle', path: ''},
-        {label: 'Editar Perfil', icon: 'edit', path: ''},
-        {label: 'Mi Snapshot', icon: 'image', path: ''},
-        {label: 'Tema', icon: 'contrast', path: ''},
-        {label: 'Configuraciones', icon: 'settings', path: ''},
+        {label: 'Perfil', icon: 'account_circle'},
+        {label: 'Editar Perfil', icon: 'edit'},
+        {label: 'Mi Snapshot', icon: 'image'},
+        {label: 'Tema', icon: 'contrast'},
+        {label: 'Configuraciones', icon: 'settings', path: '/configuraciones'},
     ]
 
     return (
@@ -66,7 +58,7 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
 
                 <div className='sidebar-buttons'>
                     {sidebarButtons.map((button) =>
-                        <div className='sidebar-link'>
+                    <div className='sidebar-link' onClick={() => linkNavigate(button.path)}>
                         <md-ripple></md-ripple>
                         <md-icon>{button.icon}</md-icon>
                         <p className='title'>{button.label}</p>

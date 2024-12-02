@@ -41,7 +41,7 @@ const CardSnapshot = ({ id, size, imgPath ,poster, caption, profileView, users, 
         return(
             <div
             className={`card-snapshot ${size}`}>
-                <Link id={id}
+                <Link key={id}
                 to={`/inicio/${id}`}>
                     <img src={imgPath} alt='Snapshot' className='snapshot-photo'></img>
                 </Link>

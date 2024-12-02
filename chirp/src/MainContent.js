@@ -13,9 +13,12 @@ const MainContent = () => {
   //const username = localStorage.getItem("user");
 
   const [openSidebar, setOpenSidebar] = useState(false);
-  
   const toggleSidebar = () => {
     openSidebar=== true ? setOpenSidebar(false) : setOpenSidebar(true);
+  }
+
+  const pageFab = () =>{
+
   }
 
   /*const StableOutlet = () => {
@@ -41,6 +44,17 @@ const MainContent = () => {
             
       
       </Context.Provider>
+      {location.pathname === '/chats' &&
+        <md-fab aria-label="Publicar">
+          <md-icon slot="icon">add_comment</md-icon>
+        </md-fab>
+      }
+      {location.pathname !== '/chats' &&
+        <md-fab aria-label="Publicar">
+          <md-icon slot="icon">add</md-icon>
+        </md-fab>
+      }
+      
       <NavBar />
     </div>
     
