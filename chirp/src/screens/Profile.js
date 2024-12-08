@@ -4,14 +4,12 @@ import CardSnapshot from '../components/CardSnapshot';
 import ssRoblox from "../assets/snapshot-roblox.png";
 import ProfileCard from '../components/ProfileCard';
 import pfpGatito from '../assets/pfp-gatito.png';
-import NavBar from '../components/NavBar';
 
 const Profile = () => {
 
     const userProfile = [
         {
             imgPath: `${pfpGatito}`,
-            name: "Angela Reyes"
         }
     ]
 
@@ -41,7 +39,6 @@ const Profile = () => {
                 {userProfile.map((myProfile) =>(
                     <ProfileCard
                         imgPath={myProfile.imgPath}
-                        name={myProfile.name}
                     >
                     </ProfileCard>
                 ))}
@@ -60,7 +57,6 @@ const Profile = () => {
                     </CardSnapshot>
                 ))}
             </div>
-            <NavBar></NavBar>
         </div>
     );
 }

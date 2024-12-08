@@ -35,7 +35,9 @@ const MainContent = () => {
     <div className='main-content'>
       <Context.Provider value={[ selectedPanel, setSelectedPanel ]}>
 
-      <Header page={location.pathname} openSidebar={toggleSidebar}/>
+      {location.pathname !== '/perfil' &&
+        <Header page={location.pathname} openSidebar={toggleSidebar}/>
+      }
       <Sidebar isOpen={openSidebar} closeSidebar={toggleSidebar}/>
       
 

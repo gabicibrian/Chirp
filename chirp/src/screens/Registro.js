@@ -12,12 +12,14 @@ const Registro = () => {
     };
     const navigate = useNavigate();
 
+    const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [openDialog, setOpenDialog] = useState(false);
 
     const validateSignup = (e) => {
         e.preventDefault();
+        localStorage.setItem('name', name);
         localStorage.setItem('user', username);
         localStorage.setItem('password', password);
         setOpenDialog(true);
@@ -30,6 +32,14 @@ const Registro = () => {
       </div>
 
       <form className="groups-container" onSubmit={validateSignup}>
+        <md-outlined-text-field
+          label="Nombre y apellido"
+          value={name}
+          onInput={(e)=>setName(e.target.value)}
+          class="input-default label"
+          required
+        ></md-outlined-text-field>
+        
         <md-outlined-text-field
           label="Nombre de usuario"
           value={username}
