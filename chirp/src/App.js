@@ -13,6 +13,7 @@ import Password2 from "./screens/Password2";
 import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
 import Settings from "./screens/Settings";
+import Profile from "./screens/Profile";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
   {
     path: '/registro',
     element: <Registro/>
+  },
+  {
+    path: '/perfil',
+    element: <Profile/>
   },
   {
     path: '/restaurar-contrasena',

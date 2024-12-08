@@ -1,0 +1,101 @@
+:root{
+    --md-filled-tonal-button-label-text-font: Jost;
+    --md-sys-color-secondary-container: var(--50BlackRock);
+    --md-sys-color-on-secondary-container: var(--0Color);
+    --md-filled-tonal-button-container-shape: 20px;
+}
+
+.container-profileCard{
+    background-color: var(--0Color);
+    width: 328px;
+    height: 335px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    justify-items: center;
+    margin-top: 5%;
+}
+
+.profile-follows{
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+   p{
+    width: 50%;
+   }
+}
+
+.userStatus{
+    width: 90px;
+    display: flex;
+    align-items: baseline;
+}
+
+.userStatus img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+}
+
+.status-container{
+    position: relative;
+    right: 5px;
+}
+
+.status{
+    background-color: var(--25BabyPurple);
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    right: 15px;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+    z-index: 1;
+}
+
+.options{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.userProfile{
+    width: 310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h1{
+    margin-bottom: 18x;
+}
+
+.userInfo-container{
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.userBio{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.edit-profile{
+    width: 310px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.surface {
+    --md-elevation-level: 1;
+    padding: 0px 20px;
+  }
+
+  .shadow{
+    border-radius: 50px;
+  }
