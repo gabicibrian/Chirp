@@ -17,10 +17,7 @@ const MainContent = () => {
     openSidebar=== true ? setOpenSidebar(false) : setOpenSidebar(true);
   }
 
-  const pageFab = () =>{
-
-  }
-
+  const [searchResults, setSearchResults] = useState('')
   /*const StableOutlet = () => {
     const o = useOutlet();
     const [outlet] = useState(o);
@@ -33,9 +30,11 @@ const MainContent = () => {
   return(
     
     <div className='main-content'>
-      <Context.Provider value={[ selectedPanel, setSelectedPanel ]}>
-
-      <Header page={location.pathname} openSidebar={toggleSidebar}/>
+      <Context.Provider value={[ selectedPanel, setSelectedPanel, searchResults, setSearchResults ]}>
+      {location.pathname !== '/perfil' &&
+        <Header page={location.pathname} openSidebar={toggleSidebar}/>
+      }
+      
       <Sidebar isOpen={openSidebar} closeSidebar={toggleSidebar}/>
       
 

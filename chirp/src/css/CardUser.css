@@ -1,0 +1,95 @@
+.card-user{
+    width: 90vw;
+    display: flex;
+    background-color: var(--0Color);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30),
+                0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    padding: 5px 10px;
+    margin: 0 auto;
+    color: var(--50BlackRock);
+}
+.card-notification{
+    color: var(--0BlackRock);
+    .label,.body{
+        color:var(--50BlackRock);
+    }
+}
+.user-profile{
+    position: relative;
+    height: fit-content;
+    img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.group-profiles{
+    display: flex;
+    width: 60px;
+    padding: 1px 0px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    img{
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.online-badge{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--25BabyPurple);
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+.user-text{
+    width: 100%;
+}
+.user-title p{
+    width: 60vw;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user-title{
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+.noti-badge{
+    text-align: center;
+    padding: 0px 4px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 100px;
+    background-color: var(--25BabyPurple);
+}
+.card-description{
+    width: 60vw;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--0BlackRock);
+}
+.card-time{
+    text-align: right;
+}
+
+
+@media only screen and (min-width: 400px) {
+    .card-description{
+        width: 70vw;
+    }
+}

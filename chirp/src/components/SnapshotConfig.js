@@ -5,11 +5,11 @@ import ssStardew from "../assets/snapshot-StardewValley.png";
 import ssFortnite from "../assets/snapshot-Fortnite.png";
 import ssMarioKart from "../assets/snapshot-MarioKart.png";
 import ssBrawl from "../assets/snapshot-brawl.png";
-import ssFlorence from '../assets/snapshot-florence.png';
-import ssClash from '../assets/snapshot-clashroyale.png';
-import ssAmongUs from '../assets/snapshot-amongus.png';
-import ssStumble from '../assets/snapshot-stumbleguys.png';
-import ssUndertale from '../assets/snapshot-undertale.png';
+import ssFlorence from "../assets/snapshot-florence.png";
+import ssClash from "../assets/snapshot-clashroyale.png";
+import ssAmongUs from "../assets/snapshot-amongus.png";
+import ssStumble from "../assets/snapshot-stumbleguys.png";
+import ssUndertale from "../assets/snapshot-undertale.png";
 
 // Lista de información de Para Ti
 export const dashboardPostsParaTi = [
@@ -40,7 +40,7 @@ export const dashboardPostsParaTi = [
       "¡Esa granja está on fire!",
       "¿Cuándo me invitas a tu isla en Stardew?",
       "Me encanta cómo organizaste el huerto.",
-    ], 
+    ],
   },
   {
     id: "snapshot-3",
@@ -77,8 +77,12 @@ export const dashboardPostsParaTi = [
     poster: "uwu",
     caption: "amo",
     profileView: false,
-    users: ["gamer_123", "spideys_wife", "player_one", "viper_sniper", "lucky_gamer"],
-    comments: ["¿Ese es un speedrun?", "¡Impresionante!", "Qué nivel de precisión."],
+    users: ["player_one", "viper_sniper", "lucky_gamer"],
+    comments: [
+      "¿Ese es un speedrun?",
+      "¡Impresionante!",
+      "Qué nivel de precisión.",
+    ],
   },
   {
     id: "snapshot-6",
@@ -98,7 +102,7 @@ export const dashboardPostsParaTi = [
     id: "snapshot-7",
     size: "mid",
     imgPath: `${ssStardew}`,
-    poster: "mei",
+    poster: "viktornation",
     caption: "ovo",
     profileView: false,
     users: ["toxic_queen", "sarah_plays", "dark_knight"],
@@ -112,7 +116,7 @@ export const dashboardPostsParaTi = [
     id: "snapshot-8",
     size: "mid",
     imgPath: `${ssMarioKart}`,
-    poster: "lolita",
+    poster: "cait_games",
     caption: "más carreritas",
     profileView: false,
     users: ["pixel_girl", "mario_master", "nightwolf_99"],
@@ -134,7 +138,7 @@ export const dashboardPostsParaTi = [
       "¡¿Cómo fue ese flick?!",
       "¡Te vi en la liga!",
       "Esos movimientos son de profesional.",
-    ], 
+    ],
   },
 ];
 
@@ -205,8 +209,8 @@ export const dashboardPostsAmigos = [
       "¡Eso es un auténtico desafío!",
       "¿Te unes a mi speedrun en Celeste?",
       "¡Vas por el récord!",
-      "Que niceee"
-    ], 
+      "Que niceee",
+    ],
   },
   {
     id: "snapshot-16",
@@ -243,10 +247,80 @@ export const dashboardPostsAmigos = [
     poster: "sans_queen",
     caption: "noche de celeste",
     profileView: false,
-    users: ["gaming_queen", "nightwolf_99"], 
-    comments: [
-      "¡Esa skin está increíble!",
-      "¿Viste el stream de ayer?",
-    ], 
+    users: ["gaming_queen", "nightwolf_99"],
+    comments: ["¡Esa skin está increíble!", "¿Viste el stream de ayer?"],
+  },
+];
+
+export const userList = [
+  {
+    user: "Madison Paz",
+    username: "madison",
+  },
+  {
+    user: "Melany Díaz",
+    username: "mei",
+  },
+  {
+    user: "Allyson Sauceda",
+    username: "ally15",
+  },
+  {
+    user: "Cindy López",
+    username: "cacahuate",
+  },
+  {
+    user: "Lola Molina",
+    username: "lolita",
+  },
+  {
+    user: "Janneate Cruz",
+    username: "uwu",
+  },
+  {
+    user: "Jennifer Santos",
+    username: "jennifer",
+  },
+  {
+    user: "Sandy Valle",
+    username: "viktornation",
+  },
+  {
+    user: "Caitlyn Sevilla",
+    username: "cait_games",
+  },
+  {
+    user: "Elsy Delgado",
+    username: "elsy",
+  },
+
+  {
+    user: "Monique Cabrera",
+    username: "monique",
+  },
+  {
+    user: "Melissa Echeverría",
+    username: "meli",
+  },
+
+  {
+    user: "Andrea Castillo",
+    username: "andry",
+  },
+  {
+    user: "Camila Ortega",
+    username: "mrs.holland",
+  },
+  {
+    user: "Lola Medina",
+    username: "lola",
+  },
+  {
+    user: "Catalina Rosales",
+    username: "cata_2002",
+  },
+  {
+    user: "Amy Tabora",
+    username: "sans_queen",
   },
 ];

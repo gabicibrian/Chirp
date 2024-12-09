@@ -1,12 +1,9 @@
 import '../css/index.css';
 import '../css/Settings.css';
 import CardSettings from '../components/CardSettings';
-import NavBar from '../components/NavBar';
 
-import { useNavigate } from 'react-router-dom';
 
 const Settings = () =>{
-  const navigate = useNavigate();
 
     const settingItem = [
         { icon: "account_circle",

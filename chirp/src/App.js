@@ -13,11 +13,15 @@ import Password2 from "./screens/Password2";
 import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
 import Settings from "./screens/Settings";
+import Chats from "./screens/Chats";
+import MyComponent from "./MyComponent";
+import Notifications from "./screens/Notifications";
+import Search from "./screens/Search";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainContent />,
+    element: <MainContent/>,
     errorElement: (
       <div style={{ textAlign: "center" }}>
         <h1 className="headline">404 Not Found</h1>
@@ -44,15 +48,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/busqueda",
-        element: <h1 className="headline placeholder">Página de Búsqueda</h1>,
+        element: <Search/>,
       },
       {
-        path: "/chats",
-        element: <h1 className="headline placeholder">Página de Chats</h1>,
+        path: '/chats',
+        element: <Chats/>
       },
       {
         path: "/notificaciones",
-        element: <h1 className="headline placeholder">Página de Notificaciones</h1>,
+        element: <Notifications />,
       },
       {
         path: '/configuraciones',
@@ -90,9 +94,6 @@ const router = createBrowserRouter([
       }
     ]
   }
-  
-  
-  
   
 ]);
 
