@@ -14,7 +14,6 @@ import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
 import Settings from "./screens/Settings";
 import Chats from "./screens/Chats";
-import MyComponent from "./MyComponent";
 import Notifications from "./screens/Notifications";
 import Search from "./screens/Search";
 

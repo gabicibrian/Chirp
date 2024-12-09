@@ -7,7 +7,6 @@ import { userList } from '../components/SnapshotConfig';
 
 const Search = () => {
     const [selectedPanel, setSelectedPanel, searchResults, setSearchResults] = useContext(Context);
-    //let searchResults = 'me'
 
     const userResults = (results) => {
         if (results === '') {

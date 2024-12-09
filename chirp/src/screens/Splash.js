@@ -8,12 +8,17 @@ import { motion } from "motion/react";
 
 const Splash = () => {
     const navigate = useNavigate();
+    const username = localStorage.getItem("user");
 
     useEffect(() => {
       setTimeout(() => {
-        navigate('/acceso');
+        if (username === null || username === '') {
+          navigate('/acceso');
+        } else{
+          navigate('/inicio');
+        }
       }, 5000);
-    }, [navigate])
+    }, [navigate, username])
 
     const defaultOptions = {
         loop: false,

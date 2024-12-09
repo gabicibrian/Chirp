@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import '../css/Chats.css'
 import CardUser from '../components/CardUser'
 import pfpGatito from '../assets/pfp-gatito.png';
