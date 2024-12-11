@@ -21,7 +21,7 @@ const Profile = () => {
             size: "horizontal",
             imgPath: `${ssRoblox}`,
             poster: `${username}`,
-            caption: "Roblox y chambrecitos",
+            caption: 'roblox y chambrecitos',
             profileView: true,
             users: ["alexa3k", "bridget_pines", "mojojojo", "ms.stacy"],
             comments: [

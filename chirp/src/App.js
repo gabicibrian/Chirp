@@ -14,6 +14,8 @@ import Password3 from "./screens/Password3";
 import Access from "./screens/Access";
 import Settings from "./screens/Settings";
 import Profile from "./screens/Profile";
+import TakePicture from "./screens/TakePicure";
+import CreateContent from "./screens/CreateContent";
 
 const router = createBrowserRouter([
   {
@@ -62,7 +64,7 @@ const router = createBrowserRouter([
       {
         path: '/perfil',
         element: <Profile/>
-      },
+      }
     ],
   },
   {
@@ -94,7 +96,15 @@ const router = createBrowserRouter([
         element: <Password3/>
       }
     ]
-  }
+  },
+  {
+    path: '/camara',
+    element: <TakePicture/>
+  },
+  {
+    path: '/subir-contenido',
+    element: <CreateContent/>
+  },
   
   
   

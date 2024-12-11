@@ -1,7 +1,6 @@
 :root{
     --md-elevated-button-label-text-font: Jost;
     --md-sys-color-surface-container-low: var(--50BlackRock);
-    /*--md-sys-color-primary: var(--0Color);*/
 }
 
 .container-profileCard{
@@ -93,6 +92,7 @@ h1{
 .surface {
     padding: 0px 20px;
     color: var(--0Color) !important;
+    --md-sys-color-primary: var(--0Color);
   }
 
   .shadow{
