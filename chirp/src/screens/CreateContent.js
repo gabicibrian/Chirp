@@ -13,7 +13,7 @@ const CreateContent = () => {
     };
     
     const subirSnapshot = [
-        {size:'vertical', imgPath:`${ssValorant2}`}
+        {size:'vertical-new', imgPath:`${ssValorant2}`}
     ]
 
     return (
