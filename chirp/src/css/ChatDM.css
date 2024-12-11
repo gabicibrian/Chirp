@@ -1,0 +1,180 @@
+.dm-container, .call-container{
+    width: var(--devicewidth);
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.call-container{
+    background-image: url(../assets/liquid-purple.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position-x: center;
+
+    animation: enterCall 200ms ease-in-out forwards;
+}
+@keyframes enterCall {
+    0%{transform: translateY(20vw);}
+    100%{transform: translateY(0);}
+}
+.call-container.exit-call{
+    animation: exitCall 500ms ease-in-out forwards;
+}
+@keyframes exitCall {
+    0%{transform: translateY(0);
+    opacity: 1;}
+    100%{transform: translateY(200vw);
+    opacity: 0;}
+}
+.dm-header,.call-header{
+    width: 90%;
+    height: 104px;
+    margin: 0 5%;
+    padding: 10px 0;
+
+    background: var(--50BlackRock);
+    color: var(--0Amour);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--0Amour);
+    
+    md-icon{
+        color: var(--0Amour);
+    }
+}
+.call-header{
+    width: 100%;
+    height: 104px;
+    padding: 10px 5%;
+    margin: 0;
+    border: none;
+}
+.dm-header h1{
+    width: 70%;
+}
+.call-header h1{
+    width: 90%;
+}
+.dms{
+    position: relative;
+    margin-top: auto;
+    padding: 110px 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    .body{
+        max-width: 70vw;
+        word-break: normal;
+    }
+    .label-sm{
+        min-width: 80px;
+        align-self: stretch;
+    }
+}
+.dm-in{
+    display: flex;
+    padding-left: 40px;
+    align-items: flex-end;
+    gap: 8px;
+    align-self: stretch;
+    color: var(--50BlackRock);
+    .label-sm{
+        text-align: right;
+    }
+    
+}
+.dm-in.with-pfp{
+    padding-left: 0 !important;
+    img{
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+.dm-in .dm{
+    display: flex;
+    padding: 4px 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 15px 15px 15px 0px;
+    background: var(--50BabyPurple);
+}
+
+.dm-out{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+    align-self: stretch;
+}
+.dm-out .dm{
+    display: flex;
+    padding: 4px 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 15px 15px 0px 15px;
+    background: var(--0BabyPurple);
+    .label-sm{
+        text-align: left;
+    }
+}
+
+.send-dm{
+    width: 90%;
+    display: flex;
+    gap: 5px;
+    margin: 15px auto 0 auto;
+    align-items: center;
+    padding: 16px 16px 48px 16px;
+    --md-sys-color-primary: var(--50BabyPurple);
+    border-top: 1px solid var(--50BabyPurple);
+    md-outlined-text-field{
+        width: 90%;
+        --md-outlined-text-field-container-shape: 5px;
+    }
+    md-icon{
+        color: var(--50BlackRock);
+    }
+    
+}
+.call-profile{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 25vh auto 0 auto;
+}
+.timer{
+    color: var(--0Amour);
+    text-align: center;
+    margin: 20px auto 100px auto;
+}
+
+.audio-btn{
+    --md-sys-color-secondary-container: var(--50BabyPurple);
+    width: 260px;
+    margin: 15px auto;
+}
+.call-buttons{
+    display: flex;
+    margin: 15px auto;
+    gap: 16px;
+}
+.mic-btn{
+    --md-sys-color-primary: var(--25MintTulip);
+    --_toggle-icon-color: var(--50BlackRock);
+    md-icon{
+        color: var(--100MintTulip) ;
+    }
+    
+}
+.hang-btn{
+    --md-sys-color-primary: #B3261E;
+}

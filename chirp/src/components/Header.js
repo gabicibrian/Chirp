@@ -6,7 +6,6 @@ import pfpGatito from "../assets/pfp-gatito.png";
 
 const Header = ({ page, openSidebar }) => {
   const [selectedPanel, setSelectedPanel, searchResults, setSearchResults] = useContext(Context);
-  console.log('results: ', searchResults)
   const navigate = useNavigate();
   const [searchbar, setSearchbar] = useState('none');
   const [searchbarChat, setSearchbarChat] = useState('none');

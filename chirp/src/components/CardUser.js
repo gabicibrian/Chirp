@@ -1,4 +1,6 @@
+import { use } from 'react';
 import '../css/CardUser.css';
+import { Link } from 'react-router-dom';
 
 const CardUser = ({type, person, online, pfpImg, user,  description, time, badgeNumber, notiType}) => {
     //parametros
@@ -20,6 +22,7 @@ const CardUser = ({type, person, online, pfpImg, user,  description, time, badge
                 notiType='follow'
         />
     */
+   let id = user;
     let notiIcon;
     switch (notiType) {
         case 'like':
@@ -37,7 +40,9 @@ const CardUser = ({type, person, online, pfpImg, user,  description, time, badge
     
     if (type === 'chat') {
         return (  
-            <div className='card-user'>
+            <Link key={id}
+            to={`/mensaje-directo/${id}`}
+            className='card-user'>
                 <md-ripple></md-ripple>
                 <div className='user-profile'>
                     {person === 1 &&
@@ -65,7 +70,7 @@ const CardUser = ({type, person, online, pfpImg, user,  description, time, badge
                     <p className='card-description body'>{description}</p>
                     <p className='label-sm card-time'>{time}</p>
                 </div>
-            </div>     
+            </Link>     
         );  
     } else if(type === 'resultados'){
         return(

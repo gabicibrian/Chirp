@@ -16,6 +16,8 @@ import Settings from "./screens/Settings";
 import Chats from "./screens/Chats";
 import Notifications from "./screens/Notifications";
 import Search from "./screens/Search";
+import ChatDM from "./screens/ChatDM";
+import Call from "./screens/Call";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +94,14 @@ const router = createBrowserRouter([
         element: <Password3/>
       }
     ]
+  },
+  {
+    path: '/mensaje-directo/:id',
+    element: <ChatDM />
+  },
+  {
+    path: 'llamada/:id',
+    element: <Call />
   }
   
 ]);

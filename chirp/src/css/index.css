@@ -50,6 +50,7 @@
   --sb-track-color: #725b96;
   --sb-thumb-color: #e2d0ff;
   --sb-size: 5px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /*Material Design Font Icon*/

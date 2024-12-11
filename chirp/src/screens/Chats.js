@@ -46,11 +46,12 @@ const Chats = () =>{
             user='anggie'
             description='Tú: holaaa'
             time='10:59' />
+            
           </div>
           <div className='chats-cards'>
             <CardUser
               type='chat' person={2} pfpImg={[pfpStumble, pfpGatito, pfpGatito]}
-              user='vacalola, vacalola, vacalola, vacalola, vacalola'
+              user='muchas vacalolas'
               description='hey, les queria preguntar si alguna vez han jugado este juego?'
               time='12:35' badgeNumber={13}/>
             <CardUser

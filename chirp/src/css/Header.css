@@ -60,6 +60,10 @@
     --md-ripple-pressed-color: var(--50BabyPurple);
     --md-ripple-hover-color: var(--50BabyPurple);
     cursor: pointer;
+    img{
+        width: 32px;
+        height: 32px;
+    }
 }
 
 .header-container md-tabs{
