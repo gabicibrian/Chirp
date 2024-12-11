@@ -110,9 +110,14 @@ const router = createBrowserRouter([
     path: '/subir-contenido',
     element: <CreateContent/>
   },
-  
-  
-  
+  {
+    path: '/mensaje-directo/:id',
+    element: <ChatDM />
+  },
+  {
+    path: 'llamada/:id',
+    element: <Call />
+  }
   
 ]);
 
