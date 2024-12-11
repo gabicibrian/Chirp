@@ -14,6 +14,7 @@ const Profile = () => {
     ]
 
     const username = localStorage.getItem("user");
+    const caption = localStorage.getItem("caption");
     
     const mySnapshot = [
         {

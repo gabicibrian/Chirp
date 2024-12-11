@@ -29,6 +29,7 @@ const CreateContent = () => {
                     <CardNew
                         size={snapshot.size}
                         imgPath={snapshot.imgPath}
+                        value={caption}
                         onInput={(e)=>setCaption(e.target.value)}
                     ></CardNew>
                 ))}
