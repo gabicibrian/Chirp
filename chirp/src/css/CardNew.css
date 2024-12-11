@@ -1,0 +1,163 @@
+:root{
+    --md-filter-chip-label-text-font: Jost;
+}
+
+/*contenedor de snapshot*/
+.card-newSnapshot{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 328px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+    background-color: var(--0Color);
+    color: var(--50BlackRock);
+    overflow: hidden;
+    text-decoration: none;
+    padding-bottom: 5%;
+
+    a{
+        width: 100%;
+        min-height:150px;
+        max-height: 150px;
+        overflow: hidden;
+    }
+}
+
+.photo-container{
+    width: 328px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--100Color);
+}
+
+.chip{
+    --md-sys-color-secondary-container: var(--0BabyPurple);
+    --md-filter-chip-elevated-container-color: var(--25Amour);
+    --md-filter-chip-selected-label-text-color: var(--100BabyPurple);
+    --md-filter-chip-selected-leading-icon-color: var(--100BabyPurple);
+    --md-filter-chip-label-text-color: var(--50BlackRock);
+    margin-right: 2%;
+}
+
+.caption-textarea{
+    min-width: 312px;
+    min-height: 38px;
+    border-color: transparent;
+    background-color: var(--0Color);
+}
+
+textarea{
+    resize: none;
+    display: block;
+}
+.card-snapshot md-icon-button{
+    --md-sys-color-primary: var(--50BlackRock);
+}
+
+.addMusic-container{
+    width: 312px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3%;
+
+    p{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.chipCarrousel-container{
+    width: 312px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.chip-carrousel{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    padding: 2%;
+}
+/*.chip-carrousel::-webkit-scrollbar {
+    display: none;
+}*/
+
+.chipCarrousel-container::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*diferentes tamaños para las cajas*/
+.horizontal{
+    width: 328px;
+    height: 189px;
+}
+.square{
+    width: 328px;
+    height: 328px;
+}
+.vertical{
+    width: 212px;
+    height: 283px;
+    overflow: hidden;
+}
+
+.newSnapshot-photo {
+    min-width: 100%;
+}
+/*texts*/
+.newSnapshot-caption{
+    display: flex;
+    width: 312px;
+    height: 41px;
+    align-items: center;
+    gap: 2px;
+    margin: 3% 0;
+}
+.snapshot-comments{
+    display: flex;
+    height: 27px;
+    padding: 0px 16px;
+    align-items: center;
+    align-self: stretch;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.30);
+}
+.snapshot-txt{
+    display: flex;
+    padding: 4px 14px 4px 16px;
+    align-items: center;
+    gap: 2px;
+    align-self: stretch;
+}
+
+.ellipsis-new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    overflow: hidden;
+    color: var(--75---Black-Rock, #140028);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 360px) {
+    .horizontal{
+        width: 300px;
+    }
+    .square{
+        width: 50%;
+    }
+    .mid{
+        width: 140px;
+    }
+    .vertical{
+        width: 27%;
+    }
+    
+    .snapshot-photo {
+        min-width: 100%;
+    }
+}

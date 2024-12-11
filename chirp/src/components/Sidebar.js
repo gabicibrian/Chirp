@@ -28,7 +28,7 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
     }
 
     const sidebarButtons = [
-        {label: 'Perfil', icon: 'account_circle'},
+        {label: 'Perfil', icon: 'account_circle', path: '/perfil'},
         {label: 'Editar Perfil', icon: 'edit'},
         {label: 'Mi Snapshot', icon: 'image'},
         {label: 'Tema', icon: 'contrast'},

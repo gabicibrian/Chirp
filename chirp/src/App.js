@@ -18,6 +18,9 @@ import Notifications from "./screens/Notifications";
 import Search from "./screens/Search";
 import ChatDM from "./screens/ChatDM";
 import Call from "./screens/Call";
+import Profile from "./screens/Profile";
+import TakePicture from "./screens/TakePicure";
+import CreateContent from "./screens/CreateContent";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +65,10 @@ const router = createBrowserRouter([
       {
         path: '/configuraciones',
         element: <Settings/>
+      },
+      {
+        path: '/perfil',
+        element: <Profile/>
       }
     ],
   },
@@ -96,13 +103,16 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/mensaje-directo/:id',
-    element: <ChatDM />
+    path: '/camara',
+    element: <TakePicture/>
   },
   {
-    path: 'llamada/:id',
-    element: <Call />
-  }
+    path: '/subir-contenido',
+    element: <CreateContent/>
+  },
+  
+  
+  
   
 ]);
 

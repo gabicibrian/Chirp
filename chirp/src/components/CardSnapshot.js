@@ -17,9 +17,6 @@ const CardSnapshot = ({ id, size, imgPath ,poster, caption, profileView, users, 
                 <div className='snapshot-caption'>
                     <p className='label'>{poster}:</p>
                     <p className='body ellipsis'>{caption}</p>
-                    <md-icon-button>
-                        <md-icon>favorite</md-icon>
-                    </md-icon-button>
                 </div>
 
                 <div className='snapshot-comments'>
