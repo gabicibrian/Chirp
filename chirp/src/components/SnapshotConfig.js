@@ -13,13 +13,12 @@ import ssStumble from "../assets/snapshot-stumbleguys.png";
 import ssUndertale from "../assets/snapshot-undertale.png";
 
 // Lista de información de Para Ti
-const myUsername = localStorage.getItem("user");
+//const myUsername = localStorage.getItem("user");
  export const mySnapshot = [
   {
       id: "mi-snapshot",
       size: "horizontal",
       imgPath: `${ssValorant2}`,
-      poster: `${myUsername}`,
       caption: 'clive, clove, claugh',
       users: ["alexa3k", "bridget_pines", "mojojojo", "ms.stacy"],
       comments: [

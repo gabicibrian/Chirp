@@ -65,7 +65,7 @@ const Profile = () => {
                     <CardSnapshot
                         id={post.id}
                         imgPath={post.imgPath}
-                        poster={post.poster}
+                        poster={username}
                         caption={post.caption}
                         profileView={true}
                         users={[post.users[0],post.users[1]]}
