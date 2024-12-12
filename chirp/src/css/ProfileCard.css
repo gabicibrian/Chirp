@@ -1,16 +1,18 @@
 :root{
     --md-elevated-button-label-text-font: Jost;
-    --md-sys-color-surface-container-low: var(--50BlackRock);
 }
 
 .container-profileCard{
     background-color: var(--0Color);
-    width: 328px;
-    height: 335px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
     flex-shrink: 0;
     border-radius: 15px;
     justify-items: center;
     margin-top: 5%;
+    --md-sys-color-surface-container-low: var(--50BlackRock);
 }
 
 .profile-follows{
@@ -52,14 +54,15 @@
 }
 
 .options{
-    width: 320px;
+    width: 90%;
+    margin: 5% auto 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 5%;
 }
 
 .userProfile{
-    width: 310px;
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -72,7 +75,8 @@ h1{
 }
 
 .userInfo-container{
-    width: 310px;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-content: flex-end;
@@ -84,7 +88,7 @@ h1{
 }
 
 .edit-profile{
-    width: 310px;
+    margin-left: auto;
     display: flex;
     justify-content: flex-end;
 }

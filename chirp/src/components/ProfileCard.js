@@ -1,10 +1,7 @@
 import '../css/ProfileCard.css';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const ProfileCard = ({imgPath}) => {
-
-    const name = localStorage.getItem("name");
-    const username = localStorage.getItem("user")
+const ProfileCard = ({imgPath, name, username}) => {
 
     const back = [
         {icon: 'arrow_back', path: '/inicio', key: 'dashboard'},
@@ -15,13 +12,13 @@ const ProfileCard = ({imgPath}) => {
         <div className='container-profileCard'>
             <div className='options'>
                 {back.map((button) =>
-                    <NavLink
+                    <Link
                         key={button.key}
                         to={button.path}>   
                      <md-icon-button>
                          <md-icon>{button.icon}</md-icon>
                      </md-icon-button>
-                    </NavLink>
+                    </Link>
                 )}
                
             </div>

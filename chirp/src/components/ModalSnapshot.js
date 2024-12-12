@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import pfpGatito from '../assets/pfp-gatito.png';
 import "../css/ModalSnapshot.css";
-import { dashboardPostsAmigos, dashboardPostsParaTi } from "../components/SnapshotConfig";
+import { dashboardPostsAmigos, dashboardPostsParaTi, mySnapshot } from "../components/SnapshotConfig";
 
 
 const ModalSnapshot = () => {
@@ -12,10 +12,19 @@ const ModalSnapshot = () => {
   if (!snapshot) {
     snapshot = dashboardPostsAmigos.find(snapshot => snapshot.id === id);
   }
+  if (!snapshot) {
+    snapshot = mySnapshot.find(snapshot => snapshot.id === id);
+  }
 
   const username = localStorage.getItem("user");
     const [newComment, setNewComment] = useState('');
 
+  const getTitle = (n) => {
+    if (n === 'mi-snapshot') {
+      return 'Mi Snapshot'
+    } else { return 'Snapshot'}
+  }
+  const title = getTitle(id);
     
 
     /*const [commentsArr, setCommentsArr] = useState(
@@ -66,7 +75,7 @@ const ModalSnapshot = () => {
           </md-icon-button>
 
         <div className="modalsnapshot-title">
-          <h1 className="headline">Snapshot</h1>
+          <h1 className="headline">{title}</h1>
           <md-icon-button>
             <md-icon>more_vert</md-icon>
           </md-icon-button>

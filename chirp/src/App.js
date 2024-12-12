@@ -56,19 +56,49 @@ const router = createBrowserRouter([
       },
       {
         path: '/chats',
-        element: <Chats/>
+        element: <Chats/>,
+        children: [
+          {
+            path: '/chats/:id',
+            element: <ModalSnapshot />,
+          }
+            ]
       },
       {
         path: "/notificaciones",
         element: <Notifications />,
+        children: [
+          {
+            path: '/notificaciones/:id',
+            element: <ModalSnapshot />,
+          }
+            ]
       },
       {
         path: '/configuraciones',
         element: <Settings/>
       },
       {
-        path: '/perfil',
-        element: <Profile/>
+        path: '/mi-perfil/',
+        element: <Profile/>,
+        children: [
+          
+          {
+            path: '/mi-perfil/:id',
+            element: <ModalSnapshot />,
+          }
+            ]
+      },
+      {
+        path: '/:id',
+        element: <Profile/>,
+        children: [
+          
+          {
+            path: '/:id/:id',
+            element: <ModalSnapshot />,
+          }
+            ]
       }
     ],
   },

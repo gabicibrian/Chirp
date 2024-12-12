@@ -6,14 +6,16 @@ const CardSnapshot = ({ id, size, imgPath ,poster, caption, profileView, users, 
 //                              profileView-bool, user1/comment1/user2/comment2-string
     if (profileView) {
         return(
-            <div className='card-snapshot'>
+            <div className='card-snapshot profile-view'>
                 <div className='snapshot-caption'>
                     <p className='label'>snapshot de </p>
                     <p className='body'>{poster}</p>
                 </div>
-                
+                <Link key={id}
+                to={`/perfil/${id}`} className='ss-photodiv'>
                 <img src={imgPath} alt='Snapshot' className='snapshot-photo'></img>
-                
+                </Link>
+
                 <div className='snapshot-caption'>
                     <p className='label'>{poster}:</p>
                     <p className='body ellipsis'>{caption}</p>

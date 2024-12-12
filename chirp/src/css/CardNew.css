@@ -43,6 +43,7 @@
 .caption-textarea{
     min-width: 312px;
     min-height: 38px;
+    padding: 5px;
     border-color: transparent;
     background-color: var(--0Color);
 }
@@ -90,15 +91,15 @@ textarea{
 }
 
 /*diferentes tamaños para las cajas*/
-.horizontal{
+.horizontal-new{
     width: 328px;
     height: 189px;
 }
-.square{
+.square-new{
     width: 328px;
     height: 328px;
 }
-.vertical{
+.vertical-new{
     width: 212px;
     height: 283px;
     overflow: hidden;

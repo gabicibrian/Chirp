@@ -56,7 +56,7 @@ const ChatDM = () =>{
             <div className='dm-in with-pfp'>
             <img src={pfpGatito} alt='foto de perfil'></img>
                 <div className='dm'>
-                    <p className='body'>{mensajes[Math.floor(Math.random() * mensajes.length)]}</p>
+                    <p className='body'>¿Te unes al squad esta noche?</p>
                     <p className='label-sm'>18:53</p>
                 </div>
             </div>

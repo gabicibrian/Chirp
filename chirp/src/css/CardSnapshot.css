@@ -18,6 +18,10 @@
         overflow: hidden;
     }
 }
+.profile-view{
+    width: 90vw;
+    margin-bottom:100px ;
+}
 .card-snapshot md-icon-button{
     --md-sys-color-primary: var(--50BlackRock);
 }
@@ -37,6 +41,14 @@
 
 .snapshot-photo {
     min-width: 100%;
+    object-fit: contain;
+    max-height: 400px;
+}
+.ss-photodiv{
+    overflow: hidden;
+    display: flex;
+    background-color: var(--100Amour);
+    height: fit-content;
 }
 /*texts*/
 .snapshot-caption{

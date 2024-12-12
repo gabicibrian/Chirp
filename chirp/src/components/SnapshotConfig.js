@@ -1,4 +1,5 @@
 import ssValorant from "../assets/snapshot-valorant.png";
+import ssValorant2 from "../assets/snapshot-valorant-2.png";
 import ssCeleste from "../assets/snapshot-celeste.png";
 import ssRoblox from "../assets/snapshot-roblox.png";
 import ssStardew from "../assets/snapshot-StardewValley.png";
@@ -12,6 +13,23 @@ import ssStumble from "../assets/snapshot-stumbleguys.png";
 import ssUndertale from "../assets/snapshot-undertale.png";
 
 // Lista de información de Para Ti
+const myUsername = localStorage.getItem("user");
+ export const mySnapshot = [
+  {
+      id: "mi-snapshot",
+      size: "horizontal",
+      imgPath: `${ssValorant2}`,
+      poster: `${myUsername}`,
+      caption: 'clive, clove, claugh',
+      users: ["alexa3k", "bridget_pines", "mojojojo", "ms.stacy"],
+      comments: [
+          "chambrecitos con café",
+          "invita mujeeer",
+          "que ambiciosa mi amix",
+          "la menos rigiosa..."
+      ]
+  }
+]
 export const dashboardPostsParaTi = [
   {
     id: "snapshot-1",
@@ -19,7 +37,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssValorant}`,
     poster: "madison",
     caption: "quick valo<3",
-    profileView: false,
+    
     users: ["alex_the_pro", "sarah_plays", "gaming_legend", "viper_sniper"],
     comments: [
       "NAUUUUR, ¡eso fue un ACE!",
@@ -34,7 +52,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssStardew}`,
     poster: "mei",
     caption: "ovo",
-    profileView: false,
+    
     users: ["spideys_wife", "dark_knight", "pixel_girl"],
     comments: [
       "¡Esa granja está on fire!",
@@ -48,7 +66,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssMarioKart}`,
     poster: "lolita",
     caption: "carreritas",
-    profileView: false,
+    
     users: ["mario_master", "toxic_queen", "x_shady"],
     comments: [
       "¡Eso fue increíble!",
@@ -62,7 +80,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssFortnite}`,
     poster: "ally15",
     caption: "juguemoss",
-    profileView: false,
+    
     users: ["jazz_mvp", "lola_pallooza", "gaming_queen"],
     comments: [
       "¡Vamos por el campeonato!",
@@ -76,7 +94,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssCeleste}`,
     poster: "uwu",
     caption: "amo",
-    profileView: false,
+    
     users: ["player_one", "viper_sniper", "lucky_gamer"],
     comments: [
       "¿Ese es un speedrun?",
@@ -90,7 +108,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssBrawl}`,
     poster: "jennifer",
     caption: "un poco de Brawl cae bien",
-    profileView: false,
+    
     users: ["gaming_legend", "viper_sniper", "alex_the_pro"],
     comments: [
       "¡Eso estuvo épico!",
@@ -104,7 +122,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssStardew}`,
     poster: "viktornation",
     caption: "ovo",
-    profileView: false,
+    
     users: ["toxic_queen", "sarah_plays", "dark_knight"],
     comments: [
       "¡Dame un 5, esa fue una jugada épica!",
@@ -118,7 +136,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssMarioKart}`,
     poster: "cait_games",
     caption: "más carreritas",
-    profileView: false,
+    
     users: ["pixel_girl", "mario_master", "nightwolf_99"],
     comments: [
       "¡¿Dónde aprendiste a jugar así?!",
@@ -132,7 +150,7 @@ export const dashboardPostsParaTi = [
     imgPath: `${ssRoblox}`,
     poster: "cacahuate",
     caption: "jail break!!!",
-    profileView: false,
+    
     users: ["x_shady", "gamer_freak", "dark_knight"],
     comments: [
       "¡¿Cómo fue ese flick?!",
@@ -150,7 +168,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssFlorence}`,
     poster: "elsy",
     caption: "a ver qué tal",
-    profileView: false,
+    
     users: ["sarah_plays", "viper_sniper"],
     comments: [
       "¡Jugar Florence nunca había sido tan épico!",
@@ -163,7 +181,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssStumble}`,
     poster: "monique",
     caption: "heeelp!",
-    profileView: false,
+    
     users: ["spideys_wife", "toxic_queen"],
     comments: [
       "¡Yo también quiero esa skin!",
@@ -176,7 +194,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssClash}`,
     poster: "meli",
     caption: "subi de rank",
-    profileView: false,
+    
     users: ["lola_pallooza", "nightwolf_99", "gamer_freak"],
     comments: [
       "¡Qué tal está esa actualización?",
@@ -190,7 +208,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssUndertale}`,
     poster: "andry",
     caption: "bored",
-    profileView: false,
+    
     users: ["spideys_wife", "alex_the_pro"],
     comments: [
       "¡Es hora de ver a Papyrus!",
@@ -203,7 +221,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssAmongUs}`,
     poster: "mrs.holland",
     caption: "de regreso a 2020 👍",
-    profileView: false,
+    
     users: ["dark_knight", "viper_sniper", "gamer_123", "lucky_gamer"],
     comments: [
       "¡Eso es un auténtico desafío!",
@@ -218,7 +236,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssRoblox}`,
     poster: "lola",
     caption: "noche de roblooox",
-    profileView: false,
+    
     users: ["toxic_queen", "gaming_legend", "pixel_girl"],
     comments: [
       "¡Acabo de conseguir la mejor skin!",
@@ -232,7 +250,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssStardew}`,
     poster: "cata_2002",
     caption: "toca cuidar la granjita",
-    profileView: false,
+    
     users: ["gamer_freak", "spideys_wife", "alex_the_pro"],
     comments: [
       "¡Roblox es el futuro!",
@@ -246,7 +264,7 @@ export const dashboardPostsAmigos = [
     imgPath: `${ssCeleste}`,
     poster: "sans_queen",
     caption: "noche de celeste",
-    profileView: false,
+    
     users: ["gaming_queen", "nightwolf_99"],
     comments: ["¡Esa skin está increíble!", "¿Viste el stream de ayer?"],
   },

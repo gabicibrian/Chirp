@@ -1,36 +1,50 @@
 import '../css/index.css';
 import '../css/Profile.css';
 import CardSnapshot from '../components/CardSnapshot';
-import ssRoblox from "../assets/snapshot-roblox.png";
 import ProfileCard from '../components/ProfileCard';
 import pfpGatito from '../assets/pfp-gatito.png';
+import { Outlet, useParams, useLocation } from 'react-router-dom';
+import { mySnapshot, dashboardPostsAmigos, dashboardPostsParaTi, userList } from '../components/SnapshotConfig';
 
 const Profile = () => {
+    const location = useLocation();
+    const {id} = useParams();
+    const name = localStorage.getItem("name");
+    const username = localStorage.getItem("user")
 
+
+/*
+    const myUser = {
+        user: name,
+        username: username,
+      }
+
+    const getUser = () =>{
+        if (location.pathname === 'mi-perfil') {
+            return myUser;
+        } else {
+            return userList.find(snapshot => snapshot.username === id);
+        }
+    }
+
+    const getSnapshot = (i) => {
+        if (i.username === username) {
+           return mySnapshot 
+        } else{
+            return dashboardPostsAmigos.find(snapshot => snapshot.poster === i.username)
+        }
+    }
+
+    const profileUser = getUser();
+    let snapshot = getSnapshot(profileUser);
+    
+    if (!snapshot) {
+        snapshot = dashboardPostsParaTi.find(snapshot => snapshot.poster === profileUser.username);
+    }
+*/
     const userProfile = [
         {
             imgPath: `${pfpGatito}`,
-        }
-    ]
-
-    const username = localStorage.getItem("user");
-    const caption = localStorage.getItem("caption");
-    
-    const mySnapshot = [
-        {
-            id: "mySnapshot",
-            size: "horizontal",
-            imgPath: `${ssRoblox}`,
-            poster: `${username}`,
-            caption: 'roblox y chambrecitos',
-            profileView: true,
-            users: ["alexa3k", "bridget_pines", "mojojojo", "ms.stacy"],
-            comments: [
-                "chambrecitos con café",
-                "invita mujeeer",
-                "que ambiciosa mi amix",
-                "la menos rigiosa ..."
-            ]
         }
     ]
 
@@ -40,6 +54,8 @@ const Profile = () => {
                 {userProfile.map((myProfile) =>(
                     <ProfileCard
                         imgPath={myProfile.imgPath}
+                        name={name}
+                        username={username}
                     >
                     </ProfileCard>
                 ))}
@@ -48,16 +64,16 @@ const Profile = () => {
                 {mySnapshot.map((post) =>(
                     <CardSnapshot
                         id={post.id}
-                        size={post.size}
                         imgPath={post.imgPath}
                         poster={post.poster}
                         caption={post.caption}
-                        profileView={post.profileView}
-                        users={post.users}
-                        comments={post.comments}>
+                        profileView={true}
+                        users={[post.users[0],post.users[1]]}
+                        comments={[post.comments[0],post.comments[1]]}>
                     </CardSnapshot>
                 ))}
             </div>
+            <Outlet />
         </div>
     );
 }

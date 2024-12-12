@@ -4,6 +4,7 @@ import '../css/Chats.css';
 import pfpGatito from '../assets/pfp-gatito.png';
 import pfpAmogus from '../assets/snapshot-amongus.png'
 import pfpStumble from '../assets/snapshot-stumbleguys.png';
+import { Outlet } from 'react-router-dom';
 
 const Notifications = () => {
 
@@ -68,6 +69,7 @@ const Notifications = () => {
             notiType={card.notiType}
         />
         )}
+        <Outlet />
         
     </div>
     )

@@ -38,9 +38,11 @@ const Header = ({ page, openSidebar }) => {
   const checkChildren = (page) => {
     if (page.includes("/inicio")) {
       return "/inicio";
-    } else {
-      return page;
-    }
+    } else if(page.includes("/chats")) {
+      return "/chats";
+    } else if(page.includes("/notificaciones")) {
+      return "/notificaciones";
+    } else return page;
   };
 
   const getHeaderTitle = (page) => {

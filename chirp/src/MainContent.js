@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useLocation, Outlet } from "react-router-dom";
+import { useLocation, Outlet, useNavigate } from "react-router-dom";
 //import { AnimatePresence, motion } from "motion/react";
 
 import NavBar from './components/NavBar';
@@ -10,6 +10,7 @@ export const Context = React.createContext()
 
 const MainContent = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   //const username = localStorage.getItem("user");
 
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -31,7 +32,7 @@ const MainContent = () => {
     
     <div className='main-content'>
       <Context.Provider value={[ selectedPanel, setSelectedPanel, searchResults, setSearchResults ]}>
-      {location.pathname !== '/perfil' &&
+      {!location.pathname.includes('perfil') &&
         <Header page={location.pathname} openSidebar={toggleSidebar}/>
       }
       
@@ -49,7 +50,7 @@ const MainContent = () => {
         </md-fab>
       }
       {location.pathname !== '/chats' &&
-        <md-fab aria-label="Publicar">
+        <md-fab aria-label="Publicar" onClick={() => navigate('/camara')}>
           <md-icon slot="icon">add</md-icon>
         </md-fab>
       }

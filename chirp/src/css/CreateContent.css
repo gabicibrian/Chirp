@@ -1,40 +1,40 @@
-:root{
+.content-container{
+    width: var(--devicewidth);
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
     --md-filled-button-label-text-color: var(--50BlackRock);
-}
 
-/*body{
     background-image: url('../assets/liquid-white-2.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}*/
-
-.content-container{
-    width: 328px;
-    padding: 18px 0;
+    form{
+        margin: 0 auto;
+    }
 }
 
 .header-content{
-    width: 328px;
+    width: 90vw;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 16px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+    color: var(--50BlackRock);
     --md-sys-color-secondary-container: var(--50BlackRock);
     --md-filled-tonal-icon-button-icon-color: var(--0Color);
     --md-filled-tonal-icon-button-pressed-state-layer-color:var(--0Color);
     h1{
-        color: var(--50BlackRock);
-        width: 228px;
-        display: flex;
-        justify-content: center;
+        width: 80%;
     }
 }
 
 .btn-container{
-    width: var(--accessdefaultwidth);
+    width: var(--accessdefaultwidth, 268px);
     height: 40px;
     align-items: center;
-    margin-bottom: 3%;
+    margin: 5px auto;
     --md-sys-color-primary: var(--50MintTulip);
     --md-sys-color-on-primary: var(--50BlackRock);
 }

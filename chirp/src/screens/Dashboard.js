@@ -26,11 +26,7 @@ const Dashboard = () =>{
             imgPath={post.imgPath}
             poster={post.poster}
             caption={post.caption}
-            profileView={post.profileView}
-            user1={post.user1}
-            comment1={post.comment1}
-            user2={post.user2}
-            comment2={post.comment2}
+            profileView={false}
           />
         ))}
       </div>
@@ -48,11 +44,7 @@ const Dashboard = () =>{
             imgPath={post.imgPath}
             poster={post.poster}
             caption={post.caption}
-            profileView={post.profileView}
-            user1={post.user1}
-            comment1={post.comment1}
-            user2={post.user2}
-            comment2={post.comment2}
+            profileView={false}
           />
         ))}
       </div>

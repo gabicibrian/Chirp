@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import Logo from '../assets/logo.svg';
 import '../css/Sidebar.css'
 
@@ -27,10 +27,12 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
         navigate(path);
     }
 
+    const location = useLocation();
+
     const sidebarButtons = [
-        {label: 'Perfil', icon: 'account_circle', path: '/perfil'},
+        {label: 'Perfil', icon: 'account_circle', path: '/mi-perfil'},
         {label: 'Editar Perfil', icon: 'edit'},
-        {label: 'Mi Snapshot', icon: 'image'},
+        {label: 'Mi Snapshot', icon: 'image', path: `${location.pathname}/mi-snapshot`, id:'mi-snapshot'},
         {label: 'Tema', icon: 'contrast'},
         {label: 'Configuraciones', icon: 'settings', path: '/configuraciones'},
     ]
@@ -58,11 +60,12 @@ const Sidebar = ({isOpen, closeSidebar}) =>{
 
                 <div className='sidebar-buttons'>
                     {sidebarButtons.map((button) =>
-                    <div className='sidebar-link' onClick={() => linkNavigate(button.path)}>
+                    <Link className='sidebar-link'
+                    to={button.path} key={button.id} onClick={() => closeSidebar()}>
                         <md-ripple></md-ripple>
                         <md-icon>{button.icon}</md-icon>
                         <p className='title'>{button.label}</p>
-                    </div>
+                    </Link>
                     )}
                 </div>
                 <div className='sidebar-link' id='cerrar-sesion' onClick={logOut}>
